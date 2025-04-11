@@ -2,10 +2,6 @@
 
 function avalanche_pipeline(params)
 
-
-flag = init_analysis(params);
-
-
 project_root = params.project_root;
 subject_jsons = dir([project_root '/derivatives/metadata/' params.dataset '/**/*.json']);
 
