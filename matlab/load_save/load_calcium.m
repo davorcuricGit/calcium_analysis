@@ -1,4 +1,4 @@
-function [ImgF, segs, goodFrames, subject_json, ME] = load_calcium(subject_json, params)
+function [ImgF, segs, goodFrames, badFrames, subject_json, ME] = load_calcium(subject_json, params)
 
 %set loading parameters. This can also be specified outside for looping
 %through projects.
@@ -20,6 +20,10 @@ end
 try
     %get motion periods
     [segs, goodFrames] = get_segments_to_keep(subject_json, params);
+    %filter good frames and get badframes
+    goodFrames = [goodFrames(cellfun(@length, goodFrames) > params.raw_parameters.good_frames_thresh)];
+    badFrames = setdiff(1:size(ImgF,3), [goodFrames{:}]);
+
 
     %get the raw recording
     if isfield(params.raw_parameters, 'tStep')
@@ -38,6 +42,8 @@ try
     recording_path = get_raw_loc(subject_json, params);
     ImgF = F_ReadRAW(recording_path, [h,w, tSteps], subject_json.init.machine_p, params.raw_parameters.warp, params.raw_parameters.err, 0, params.raw_parameters.batch_blocks, params);
 
+
+    
 
     %update json
     subject_json = update_json(subject_json, false, struct(step = 'loading', type = '', message = 'success!'));

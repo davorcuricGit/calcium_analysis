@@ -7,11 +7,11 @@ function [segmentToKeep, goodFrames] = get_segments_to_keep(json, params);%T0, r
 %     which is then seperated
 
 T0 = json.init.offset;
-recordingName = get_raw_loc(json);
+recordingName = get_raw_loc(json, params);
 
-if isfield(params, 'tStep')
-        if isnumeric(params.tStep)
-            recLen = params.tStep;
+if isfield(params.raw_parameters, 'tStep')
+        if isnumeric(params.raw_parameters.tStep)
+            recLen = params.raw_parameters.tStep;
         else
             recLen = json.init.duration;
         end
@@ -20,22 +20,22 @@ if isfield(params, 'tStep')
     end
 
 
-if isfield(params, 'batch_blocks')
-    batchblocks = params.batch_blocks;
+if isfield(params.raw_parameters, 'batch_blocks')
+    batchblocks = params.raw_parameters.batch_blocks;
 else
     batchblocks = 1;
 end
 
-if isfield(params, 'segmentDurationThreshold')
-    segmentDurationThreshold = params.segmentDurationThreshold;
+if isfield(params.raw_parameters, 'good_frames_thresh')
+    segmentDurationThreshold = params.raw_parameters.good_frames_thresh;
 else
     segmentDurationThreshold = 200;
 end
 
 tSteps = 1000000;
 try 
-    
-motionIndex = fetchMotionErrorFile( recordingName, [256, 256, tSteps]);
+    recordingName
+motionIndex = fetchMotionErrorFile( recordingName, [json.init.height, json.init.width, tSteps]);
 catch exception
     if strcmp(exception.identifier, 'MATLAB:badsubscript')
         tSteps = exception.message;

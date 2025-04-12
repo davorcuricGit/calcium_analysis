@@ -13,10 +13,10 @@ if params.run
         %downsample the FOV
         ImgF = spatialBlockDownsample(ImgF, params.down_sample);
         ImgF = zscore_independent(ImgF);
-% 
-%         %filter good frames and get badframes
-%         goodFrames = [goodFrames(cellfun(@length, goodFrames) > params.good_frames_thresh)];
-%         badFrames = setdiff(1:size(ImgF,3), [goodFrames{:}]);
+
+        %filter good frames and get badframes
+        goodFrames = [goodFrames(cellfun(@length, goodFrames) > params.good_frames_thresh)];
+        badFrames = setdiff(1:size(ImgF,3), [goodFrames{:}]);
 
         %set badframes to zero
         ImgF(:,:,badFrames) = 0;
