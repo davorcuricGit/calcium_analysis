@@ -65,7 +65,7 @@ fclose(fid);
 if warp==1
 [pathname,~]=fileparts(filename);
 load([pathname '/transform.mat'],'tform');
-load(fullfile(params.calcium_analysis_root, 'matlab_codes', 'auxfiles', 'allenDorsalMap_donovan.mat'),'dorsalMaps');
+load(fullfile(params.calcium_analysis_root, 'codes', 'matlab', 'auxfiles', 'allenDorsalMap_donovan.mat'),'dorsalMaps');
 
 if memsave <= 1
     ImgF=output_warped(ImgF,tform,dorsalMaps);
