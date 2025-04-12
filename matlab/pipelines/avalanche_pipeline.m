@@ -6,7 +6,7 @@ function flag = avalanche_pipeline(ImgF, subject_json, params)
 if params.run
 
     %load mask and get network
-    [mask, validPixels] = load_standard_mask(params.parameters);
+    [~, validPixels] = load_standard_mask(params.parameters);
     [adjmat,network] = distance_network(128,validPixels, params.parameters);
 
     
