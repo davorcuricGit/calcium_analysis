@@ -1,4 +1,4 @@
-function [mask, validPixels] = load_standard_mask(params)
+function [mask, validPixels, sz] = load_standard_mask(params)
 
     %get the mask and validPixels
        
@@ -10,6 +10,7 @@ function [mask, validPixels] = load_standard_mask(params)
     maxmask = max(max(mask));
     mask = single(mask/maxmask);
     
+    sz = size(mask);
     
 %     mask = spatialBlockDownsample(mask, params.down_sample);
 %     mask(mask ~= 1) = NaN;
