@@ -42,7 +42,24 @@ try
     recording_path = get_raw_loc(subject_json, params);
     ImgF = F_ReadRAW(recording_path, [h,w, tSteps], subject_json.init.machine_p, params.raw_parameters.warp, params.raw_parameters.err, 0, params.raw_parameters.batch_blocks, params);
 
+    if params.ImgF_processing.badFramesNaN
+        ImgF(:,:,badFrames) = nan;
+    end
 
+    if params.ImgF_processing.remove_masked_pixels
+        [mask, validPixels] = load_standard_mask(params.ImgF_processing);
+        params.ImgF_processing.reshape = true; %this requires reshaping
+    end
+
+    if params.ImgF_processing.reshape
+        ImgF = reshape(ImgF, subject_json.init.height*subject_json.init.width, tSteps);
+        if params.ImgF_processing.remove_masked_pixels
+            ImgF = ImgF(validPixels,:);
+        end
+    end
+
+    
+    
     
 
     %update json
