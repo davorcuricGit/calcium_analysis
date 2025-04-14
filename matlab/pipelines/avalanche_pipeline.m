@@ -1,7 +1,8 @@
 
 
-function flag = avalanche_pipeline(ImgF, subject_json, params, project)
+function [flag,ME] = avalanche_pipeline(ImgF, subject_json, params, project)
 
+ME = [];%error handeling
 progress.iexp = subject_json.init.recid;
 progress.total = length(subject_json);
 
@@ -31,26 +32,27 @@ if ~isempty(ImgF)
 
             %get avalanches
             %for th = 1:length(params.parameters.thresh_list)
-                thresh = params.parameters.thresh_list(th);
+            thresh = params.parameters.threshold;
 
-%                 step = ['avs_thresh_' num2str(thresh)];
-%                 type = 'avalanches';
-                stepparams = struct(step = params.step, ...
-                    type = params.type, ...
-                    threshold = thresh, ...
-                    hkradius = params.parameters.hkradius, ...
-                    downsample = params.ImgF_processing.down_sample, ...
-                    warp = project.raw_parameters.warp);
+            %                 step = ['avs_thresh_' num2str(thresh)];
+            %                 type = 'avalanches';
+            stepparams = struct(step = params.step, ...
+                type = params.type, ...
+                threshold = thresh, ...
+                hkradius = params.parameters.hkradius, ...
+                downsample = params.ImgF_processing.down_sample, ...
+                warp = project.raw_parameters.warp);
 
-                avstats = segmented_avalanche_analysis(ImgF, validPixels, adjmat, network, stepparams);
-                subject_json = update_json(subject_json, true, stepparams);
-                subject_json = save_avalanche_derivative(subject_json,avstats, stepparams, project);
+            'Calculating Avalanches....'
+            avstats = segmented_avalanche_analysis(ImgF, validPixels, adjmat, network, stepparams);
+            subject_json = update_json(subject_json, true, stepparams);
+            subject_json = save_avalanche_derivative(subject_json,avstats, stepparams, project);
 
-                save_json(subject_json, project)
-                'saved!'
-                clear stepparams
-            end
-            clear ImgF
+            save_json(subject_json, project)
+            'saved!'
+            %   clear stepparams
+            %end
+            %clear ImgF
 
             %save progress
 

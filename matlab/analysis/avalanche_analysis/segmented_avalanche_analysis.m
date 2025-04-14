@@ -21,8 +21,11 @@ branches = cell(1);
 for s = 1:length(segTimes)
     seg = (ImgF(:, segTimes{s}));
 
-
+    
     seg = seg > threshold;
+    seg = single(seg);
+ 
+    
 
     if sum(sum(seg)) == 0 %if activity has been thresholded out skip segment
         continue
@@ -30,12 +33,17 @@ for s = 1:length(segTimes)
         %second pass to get periods of activity
         segTimes2 = get_non_zero_segments(sum(seg));
 
+        
 
         for s2 = 1:length(segTimes2)
+            
             t0 = segTimes{s}(1) + segTimes2{s2}(1);
             seg2 = seg(:, segTimes2{s2});
             if length(segTimes2{s2}) > 1
+                
+                
                 [S{end+1}, D{end+1}, merged{end+1}, ~, roots{end+1}, rootTimes{end+1}, branches{end+1}] = getAvalanches(seg2, network, adjmat, validPixels, 1);
+                
             else
                 S{end+1} = sum(seg2);
                 D{end+1} = 1;
