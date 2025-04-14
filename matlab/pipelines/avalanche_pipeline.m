@@ -1,65 +1,82 @@
 
 
-function flag = avalanche_pipeline(ImgF, subject_json, params)
+function flag = avalanche_pipeline(ImgF, subject_json, params, project)
+
+progress.iexp = subject_json.init.recid;
+progress.total = length(subject_json);
+
+if ~isempty(ImgF)
+    try
+        if params.run
 
 
-if params.run
 
-    if isfield(params.ImgF_processing, 'down_sample')
-        if params.ImgF_processing.down_sample > 1
-            'here'
-            [ImgF, validPixels, sz] = spatial_downsample_reshaped(ImgF, params.ImgF_processing);
+            if isfield(params.ImgF_processing, 'down_sample')
+                if params.ImgF_processing.down_sample > 1
+
+                    [ImgF, validPixels, sz] = spatial_downsample_reshaped(ImgF, params.ImgF_processing);
+                else
+                    [~, validPixels, sz] = load_standard_mask(params.ImgF_processing);
+                end
+            else
+                [~, validPixels, sz] = load_standard_mask(params.ImgF_processing);
+            end
+
+            [adjmat,network] = distance_network(sz(1),validPixels, params.parameters);
+
+
+            trace = sum(ImgF);
+            badFrames = find(isnan(trace) == 1);
+            ImgF(:,badFrames) = 0;
+
+            %get avalanches
+            for th = 1:length(params.parameters.thresh_list)
+                thresh = params.parameters.thresh_list(th);
+
+                step = ['avs_thresh_' num2str(thresh)];
+                type = 'avalanches';
+                stepparams = struct(step = step, ...
+                    type = type, ...
+                    threshold = thresh, ...
+                    hkradius = params.parameters.hkradius, ...
+                    downsample = params.ImgF_processing.down_sample, ...
+                    warp = project.raw_parameters.warp);
+
+                avstats = segmented_avalanche_analysis(ImgF, validPixels, adjmat, network, stepparams);
+                subject_json = update_json(subject_json, true, stepparams);
+                subject_json = save_avalanche_derivative(subject_json,avstats, stepparams, project);
+
+                save_json(subject_json, project)
+                'saved!'
+                clear stepparams
+            end
+            clear ImgF
+
+            %save progress
+
+            progress.time = datestr(now, 'yyyy-mm-ddTHH:MM:SS');
+            save(fullfile(params.calcium_analysis_root, [subject_json.init.dataset, 'progress.mat']), 'progress');
+            %end
+            flag = "finished!";
         else
-            [~, validPixels, sz] = load_standard_mask(params.ImgF_processing);
+            flag = "project run is off";
         end
-    else
-        [~, validPixels, sz] = load_standard_mask(params.ImgF_processing);
+
+    catch ME
+        flag = 'something went wrong';
+        progress.time = datestr(now, 'yyyy-mm-ddTHH:MM:SS');
+        progress.ME = ME;
+        save(fullfile(params.calcium_analysis_root, [subject_json.init.dataset, 'error.mat']), 'progress');
+
     end
-
-    [adjmat,network] = distance_network(sz(1),validPixels, params.parameters);
-
-
-    trace = sum(ImgF);
-    badFrames = find(isnan(trace) == 1);
-    ImgF(:,badFrames) = 0;
-    imagesc(ImgF)
-    stop
-
-
-    %get avalanches
-    for th = 1:length(params.thresh_list)
-        thresh = params.thresh_list(th);
-
-        step = ['avs_thresh_' num2str(thresh)];
-        type = 'avalanches';
-        stepparams = struct(step = step, ...
-            type = type, ...
-            threshold = thresh, ...
-            hkradius = params.hkradius, ...
-            downsample = params.down_sample, ...
-            good_frames_threshold = params.good_frames_thresh, ...
-            warp = params.warp);
-
-        avstats = segmented_avalanche_analysis(ImgF, validPixels, adjmat, network, stepparams);
-        subject_json = update_subject_json(subject_json, true, stepparams);
-        subject_json = save_avalanche_derivative(subject_json,avstats, stepparams);
-
-        save_json(subject_json)
-        'saved!'
-        clear stepparams
-    end
-    clear ImgF
-
-    %save progress
-    progress.iexp = i;
-    progress.total = length(subject_subject_jsons);
-    progress.time = datestr(now, 'yyyy-mm-ddTHH:MM:SS');
-    save([params.project 'progress'], 'progress');
-    %end
-    flag = "finished!";
 else
-    flag = "project run is off";
+    flag = ['imgF is empty'];
+    progress.time = datestr(now, 'yyyy-mm-ddTHH:MM:SS');
+    progress.flag = flag;
+    save(fullfile(params.calcium_analysis_root, 'progress', [subject_json.init.dataset, 'error.mat']), 'progress');
+
+
 end
-%%
+
 end
 
