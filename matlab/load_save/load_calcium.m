@@ -12,7 +12,7 @@ if ~exist('params', 'var')
     params = struct(err = 0,...
         warp = 1, ...
         batch_blocks = 4, ...
-        tStep = 2000, ...
+        tSteps = 2000, ...
         down_sample = 2 ...
         );
 end
@@ -33,9 +33,9 @@ try
 
 
         %get the raw recording
-        if isfield(params.raw_parameters, 'tStep')
-            if isnumeric(params.raw_parameters.tStep)
-                tSteps = params.raw_parameters.tStep;
+        if isfield(params.raw_parameters, 'tSteps')
+            if isnumeric(params.raw_parameters.tSteps)
+                tSteps = params.raw_parameters.tSteps;
             else
                 tSteps = subject_json.init.duration;
             end
