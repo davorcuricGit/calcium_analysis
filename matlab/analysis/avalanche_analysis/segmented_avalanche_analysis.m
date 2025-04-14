@@ -8,7 +8,7 @@ function av_stats = segmented_avalanche_analysis(ImgF, validPixels, adjmat, netw
 av_stats = struct();
 threshold = params.threshold;
 
-segTimes = get_non_zero_segments(sum(ImgF));
+segTimes = get_non_zero_segments(nansum(ImgF));
 
 S = cell(1);
 D = cell(1);
@@ -21,7 +21,7 @@ branches = cell(1);
 for s = 1:length(segTimes)
     seg = (ImgF(:, segTimes{s}));
 
-
+    seg(isnan(seg)) = 0;
     seg = seg > threshold;
     seg = single(seg);
  
@@ -32,7 +32,7 @@ for s = 1:length(segTimes)
         continue
     else
         %second pass to get periods of activity
-        segTimes2 = get_non_zero_segments(sum(seg));
+        segTimes2 = get_non_zero_segments(nansum(seg));
 
         
 
