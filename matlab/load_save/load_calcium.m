@@ -29,7 +29,7 @@ try
     else
         %filter good frames and get badframes
         goodFrames = [goodFrames(cellfun(@length, goodFrames) > params.raw_parameters.good_frames_thresh)];
-        badFrames = setdiff(1:size(ImgF,3), [goodFrames{:}]);
+        
 
 
         %get the raw recording
@@ -49,7 +49,12 @@ try
         recording_path = get_raw_loc(subject_json, params);
         ImgF = F_ReadRAW(recording_path, [h,w, tSteps], subject_json.init.machine_p, params.raw_parameters.warp, params.raw_parameters.err, 0, params.raw_parameters.batch_blocks, params);
 
+         if params.ImgF_processing.zscore
+            ImgF = zscore_independent(ImgF);
+        end
+
         if params.ImgF_processing.badFramesNaN
+            badFrames = setdiff(1:size(ImgF,3), [goodFrames{:}]);
             ImgF(:,:,badFrames) = nan;
         end
 
@@ -65,6 +70,7 @@ try
             end
         end
 
+       
 
         subject_json = update_json(subject_json, true, struct(step = 'loading', type = '', message = 'success!'));
         save_json(subject_json, params)
