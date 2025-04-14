@@ -31,7 +31,6 @@ try
         goodFrames = [goodFrames(cellfun(@length, goodFrames) > params.raw_parameters.good_frames_thresh)];
         
 
-
         %get the raw recording
         if isfield(params.raw_parameters, 'tSteps')
             if isnumeric(params.raw_parameters.tSteps)
@@ -48,13 +47,16 @@ try
         w = subject_json.init.width;
         recording_path = get_raw_loc(subject_json, params);
         ImgF = F_ReadRAW(recording_path, [h,w, tSteps], subject_json.init.machine_p, params.raw_parameters.warp, params.raw_parameters.err, 0, params.raw_parameters.batch_blocks, params);
-
+        
+        
+      
        
         if params.ImgF_processing.badFramesNaN
             badFrames = setdiff(1:size(ImgF,3), [goodFrames{:}]);
             ImgF(:,:,badFrames) = nan;
         end
 
+   
         if params.ImgF_processing.remove_masked_pixels
             [mask, validPixels] = load_standard_mask(params.ImgF_processing);
             params.ImgF_processing.reshape = true; %this requires reshaping
