@@ -9,6 +9,7 @@ i_p = inputParser;
 i_p.addRequired('json', @isstruct);
 i_p.addRequired('dorsalMaps', @isstruct);
 i_p.addOptional('downsample', 1);
+i_p.addOptional('globalmask', @isstring);
 % 
 % 
 i_p.parse(json, dorsalMaps, varargin{:});
@@ -20,8 +21,24 @@ i_p.parse(json, dorsalMaps, varargin{:});
             params.down_sample =  i_p.Results.downsample;
             params.coarseGrainQ = false;
             indiv_mask = spatialBlockDownsample(indiv_mask,params);
-
+            clear params
         end
+
+        if ~isempty(i_p.Results.globalmask)
+            params.mask_name = i_p.Results.globalmask;
+            global_mask = load_standard_mask(params);
+
+            if i_p.Results.downsample > 1
+            params.down_sample =  i_p.Results.downsample;
+            params.coarseGrainQ = false;
+            global_mask = spatialBlockDownsample(global_mask,params);
+
+            end
+            clear params
+            indiv_mask = indiv_mask.*global_mask;
+        end
+
+
 
     
 
