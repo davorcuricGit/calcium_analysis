@@ -10,12 +10,12 @@ if ~isempty(ImgF)
     try
         if params.run
 
-
+            
 
             if isfield(params.ImgF_processing, 'down_sample')
                 if params.ImgF_processing.down_sample > 1
-
-                    [ImgF, validPixels, sz] = spatial_downsample_reshaped(ImgF, av_json.ImgF_processing.down_sample, params.ImgF_processing);
+                    
+                    [ImgF, validPixels, sz] = spatial_downsample_reshaped(ImgF, params.ImgF_processing.down_sample, params.ImgF_processing);
                 else
                     [~, validPixels, sz] = load_standard_mask(params.ImgF_processing);
                 end
@@ -68,6 +68,7 @@ if ~isempty(ImgF)
         end
 
     catch ME
+        
         flag = 'something went wrong';
         progress.time = datestr(now, 'yyyy-mm-ddTHH:MM:SS');
         progress.ME = ME;
