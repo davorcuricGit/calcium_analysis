@@ -35,7 +35,8 @@ for i = 1:length(currentClusters)
 
         if isempty(childrencluster)
             %this cluster is a branch
-            Av{avCount}.branches = [Av{avCount}.branches c];
+            %Av{avCount}.branches = [Av{avCount}.branches c];
+            Av{avCount}.branches = [c];
         end
 
         avCount = avCount + 1;
@@ -65,7 +66,7 @@ for i = 1:length(currentClusters)
         %Av{newLabel} = updateAvalanche(Av{newLabel}, t, c);
         Av{newLabel} = updateAvalanche_w_branches(Av{newLabel}, t, length(c));
         Av{newLabel}.merged = true;
-        %go back and relabel all the parents
+        %relabel all the parents
         for parlab = 2:length(parentLabels)
 
 
@@ -105,6 +106,12 @@ for i = 1:length(currentClusters)
             AvLabel{parentLabels(parlab)} = [];
 
             %labeledFrame(labeledFrame == parentLabels(parlab)) = newLabel;
+        end
+
+        %lastly find any outstanding branches
+          if isempty(childrencluster)
+            %this cluster is a branch
+            Av{newLabel}.branches = [Av{newLabel}.branches; reshape(c,[],1)];
         end
 
         %finally apply the label to the current cluster

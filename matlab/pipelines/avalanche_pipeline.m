@@ -1,7 +1,7 @@
 
 
-function [flag,ME] = avalanche_pipeline(ImgF, subject_json, params, project)
-
+function [flag,ME, avstats] = avalanche_pipeline(ImgF, subject_json, params, project)
+avstats = [];
 ME = [];%error handeling
 progress.iexp = subject_json.init.recid;
 progress.total = length(subject_json);
@@ -48,7 +48,7 @@ if ~isempty(ImgF)
                 warp = project.raw_parameters.warp);
 
             'Calculating Avalanches....'
-            avstats = segmented_avalanche_analysis(ImgF, validPixels, adjmat, network, stepparams);
+            [avstats,ME] = segmented_avalanche_analysis(ImgF, validPixels, adjmat, network, stepparams);
             subject_json = update_json(subject_json, true, stepparams);
             subject_json = save_avalanche_derivative(subject_json,avstats, stepparams, project);
 
