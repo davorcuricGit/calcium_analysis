@@ -1,4 +1,4 @@
-function subnetwork = get_subnetworks(json, dorsalMaps, varargin)
+function subnetwork = get_subnetworks(json, dorsalMaps)
 %get the subnetworks absed off of the subejcts individual mask. 
 %individual mask is affine warped in the same way as reocrding.
 %if a global mask is provided then it will filter any pixels not int he
@@ -13,17 +13,9 @@ function subnetwork = get_subnetworks(json, dorsalMaps, varargin)
 % i_p.parse(recording_path, dorsalMaps, varargin{:});
 
 % 
-recording_path = fullfile(json.init.project_root, 'raw_data', strrep(json.processing.transform, 'transform.mat', '')) ;
-     indiv_mask = get_individual_mask(recording_path, dorsalMaps);
-%     
-%     if ~isempty(i_p.Results.global_mask)
-%         %indiv_mask = indiv_mask.*i_p.Results.global_mask;
-%         indiv_mask = reshape(indiv_mask, prod(size(indiv_mask)), 1);
-%         indiv_mask = indiv_mask(find(i_p.Results.global_mask == 1));
-%         
-%     end
-    
-    %remove boundary
+
+     indiv_mask = load_individual_mask(json, dorsalMaps);
+
     
 
     uq = unique(ceil((indiv_mask(indiv_mask ~= 0))));
