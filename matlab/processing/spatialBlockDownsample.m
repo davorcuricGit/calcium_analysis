@@ -9,7 +9,7 @@ downSample = params.down_sample;
 
 
 
-    if ~exist('coarseGrainQ','var')
+    if ~isfield(params,'coarseGrainQ')
         coarseGrainQ = true;
     else
         coarseGrainQ = params.coarseGrainQ;
