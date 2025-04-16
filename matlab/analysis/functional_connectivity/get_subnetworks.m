@@ -18,9 +18,7 @@ i_p.parse(json, dorsalMaps, varargin{:});
      indiv_mask = load_individual_mask(i_p.Results.json, i_p.Results.dorsalMaps);
 
         if i_p.Results.downsample > 1
-            params.down_sample =  i_p.Results.downsample;
-            params.coarseGrainQ = false;
-            indiv_mask = spatialBlockDownsample(indiv_mask,params);
+            indiv_mask = spatialBlockDownsample(indiv_mask,i_p.Results.downsample, false);
             clear params
         end
 
@@ -29,9 +27,8 @@ i_p.parse(json, dorsalMaps, varargin{:});
             global_mask = load_standard_mask(params);
 
             if i_p.Results.downsample > 1
-            params.down_sample =  i_p.Results.downsample;
-            params.coarseGrainQ = false;
-            global_mask = spatialBlockDownsample(global_mask,params);
+            
+            global_mask = spatialBlockDownsample(global_mask,i_p.Results.downsample, false);
 
             end
             clear params

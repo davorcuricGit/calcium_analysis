@@ -40,20 +40,20 @@ for s = 1:length(segTimes)
             %[s, length(segTimes), s2, length(segTimes2)]
             t0 = segTimes{s}(1) + segTimes2{s2}(1);
             seg2 = seg(:, segTimes2{s2});
-            if length(segTimes2{s2}) > 1
+            %if length(segTimes2{s2}) > 1
                 
                 
                 
                 [S{end+1}, D{end+1}, merged{end+1}, ~, roots{end+1}, rootTimes{end+1}, branches{end+1}] = getAvalanches(seg2, network, adjmat, validPixels, 1);
                 
-            else
-                S{end+1} = sum(seg2);
-                D{end+1} = 1;
-                merged{end+1} = 0;
-                roots{end+1} = find(seg2 > 0);
-                rootTimes{end+1} = t0;
-                branches{end+1} = roots{end};
-            end
+%             else
+%                 S{end+1} = sum(seg2);
+%                 D{end+1} = 1;
+%                 merged{end+1} = 0;
+%                 roots{end+1} = find(seg2 > 0);
+%                 rootTimes{end+1} = t0;
+%                 branches{end+1} = roots{end};
+          %  end
         end
     end
 end
