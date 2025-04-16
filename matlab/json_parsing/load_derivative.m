@@ -1,6 +1,7 @@
 
-function derivative = load_derivative(json,step, project)
+function [derivative, ME] = load_derivative(json,step, project)
 derivative = [];
+ME = [];
 try
 
 
@@ -8,7 +9,7 @@ try
 
     floc = fullfile(path, [json.(step).name, json.(step).extension]);
     load(floc)
-catch
+catch ME
     % if this fails update the json success flag
 
     dervitative = [];

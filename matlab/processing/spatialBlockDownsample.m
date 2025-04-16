@@ -35,7 +35,7 @@ downSample = params.down_sample;
             end
         end
 
-    else
+    end
 
       
 
