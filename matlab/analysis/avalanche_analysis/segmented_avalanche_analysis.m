@@ -65,6 +65,7 @@ av_stats.merged = {merged{2:end}};
 av_stats.roots = {roots{2:end}};
 av_stats.rootTimes = {rootTimes{2:end}};
 av_stats.branches = {branches{2:end}};
+av_stats.validpixels = validPixels;
 
 
 end
