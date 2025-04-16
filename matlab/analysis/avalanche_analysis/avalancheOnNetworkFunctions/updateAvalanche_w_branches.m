@@ -1,5 +1,5 @@
 
-function Av = updateAvalanche(Av, t, clusterSize)
+function Av = updateAvalanche_w_branches(Av, t, clusterSize)
 
 
 if t > Av.endTime
