@@ -15,7 +15,7 @@ if size(cluster,1)~=1; cluster = cluster'; end
             Av.rootTime = single(t*ones(size(cluster)));
             
             Av.duration = 1;
-            Av.branches = single(cluster)';%[];%[];
+            Av.branches = [];
             
             %Av.avtime = [t];
         end

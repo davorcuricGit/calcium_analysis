@@ -5,25 +5,38 @@ function subnetwork = get_subnetworks(json, dorsalMaps, varargin)
 %globalmask
 
 
-% i_p = inputParser;
-% i_p.addRequired('recording_path', @ischar)
-% i_p.addRequired('dorsalMaps', @isstruct);
+i_p = inputParser;
+i_p.addRequired('json', @isstruct);
+i_p.addRequired('dorsalMaps', @isstruct);
+i_p.addOptional('downsample', 1);
+i_p.addOptional('globalmask', @isstring);
 % 
 % 
-% i_p.parse(recording_path, dorsalMaps, varargin{:});
+i_p.parse(json, dorsalMaps, varargin{:});
 
-% 
-recording_path = fullfile(json.init.project_root, 'raw_data', strrep(json.processing.transform, 'transform.mat', '')) ;
-     indiv_mask = get_individual_mask(recording_path, dorsalMaps);
-%     
-%     if ~isempty(i_p.Results.global_mask)
-%         %indiv_mask = indiv_mask.*i_p.Results.global_mask;
-%         indiv_mask = reshape(indiv_mask, prod(size(indiv_mask)), 1);
-%         indiv_mask = indiv_mask(find(i_p.Results.global_mask == 1));
-%         
-%     end
-    
-    %remove boundary
+
+     indiv_mask = load_individual_mask(i_p.Results.json, i_p.Results.dorsalMaps);
+
+        if i_p.Results.downsample > 1
+            indiv_mask = spatialBlockDownsample(indiv_mask,i_p.Results.downsample, false);
+            clear params
+        end
+
+        if ~isempty(i_p.Results.globalmask)
+            params.mask_name = i_p.Results.globalmask;
+            global_mask = load_standard_mask(params);
+
+            if i_p.Results.downsample > 1
+            
+            global_mask = spatialBlockDownsample(global_mask,i_p.Results.downsample, false);
+
+            end
+            clear params
+            indiv_mask = indiv_mask.*global_mask;
+        end
+
+
+
     
 
     uq = unique(ceil((indiv_mask(indiv_mask ~= 0))));

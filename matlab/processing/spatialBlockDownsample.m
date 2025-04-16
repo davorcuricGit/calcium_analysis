@@ -1,18 +1,18 @@
-function DS = spatialBlockDownsample(XYT, params)
+function DS = spatialBlockDownsample(XYT, downSample, coarseGrainQ)
 % %Input: XYT - an array in space (x,y) and time (t) in the third dimension.
 % if you want to spatially downsample a XbyT array, see
 % spatialDownsampleReshaped.m
 % %atm code is written so that spatial dimensions should be equal and even.
 % %blockSize - single, the block size along a single dimension that will be downsampled to.
 
-downSample = params.down_sample;
+%downSample = params.down_sample;
 
 
 
-    if ~exist('coarseGrainQ','var')
+    if ~exist('coarseGrainQ', 'var')
         coarseGrainQ = true;
     else
-        coarseGrainQ = params.coarseGrainQ;
+        coarseGrainQ = coarseGrainQ;
     end
 
     DS = zeros(size(XYT,1)/downSample, size(XYT,2)/downSample, size(XYT,3));
@@ -35,7 +35,7 @@ downSample = params.down_sample;
             end
         end
 
-    else
+    end
 
       
 
