@@ -1,17 +1,18 @@
 
 
-function [segmentToKeep, goodFrames] = get_segments_to_keep(json, params);%T0, recLen, recordingName, params );
+function [segmentToKeep, goodFrames, ME] = get_segments_to_keep(json, params);%T0, recLen, recordingName, params );
 %      get the frames with no excessive motion
 %     some of the recordings are split up. This can cause problems with the motionIndex file.
 %     the stupid way around this is to force an error which will then return the length of the motionIndex file,
 %     which is then seperated
 
 T0 = json.init.offset;
-recordingName = get_raw_loc(json);
+recordingName = get_raw_loc(json, params);
+ME.identifier = 'all is gucci';
 
-if isfield(params, 'tStep')
-        if isnumeric(params.tStep)
-            recLen = params.tStep;
+if isfield(params.raw_parameters, 'tStep')
+        if isnumeric(params.raw_parameters.tStep)
+            recLen = params.raw_parameters.tStep;
         else
             recLen = json.init.duration;
         end
@@ -20,22 +21,22 @@ if isfield(params, 'tStep')
     end
 
 
-if isfield(params, 'batch_blocks')
-    batchblocks = params.batch_blocks;
+if isfield(params.raw_parameters, 'batch_blocks')
+    batchblocks = params.raw_parameters.batch_blocks;
 else
     batchblocks = 1;
 end
 
-if isfield(params, 'segmentDurationThreshold')
-    segmentDurationThreshold = params.segmentDurationThreshold;
+if isfield(params.raw_parameters, 'good_frames_thresh')
+    segmentDurationThreshold = params.raw_parameters.good_frames_thresh;
 else
     segmentDurationThreshold = 200;
 end
 
-tSteps = 1000000;
+tSteps = 10000000; %this is just to get the whole motion index file
 try 
     
-motionIndex = fetchMotionErrorFile( recordingName, [256, 256, tSteps]);
+motionIndex = fetchMotionErrorFile( recordingName, [json.init.height, json.init.width, tSteps]);
 catch exception
     if strcmp(exception.identifier, 'MATLAB:badsubscript')
         tSteps = exception.message;
@@ -55,12 +56,18 @@ end
     %now make sure we are counting from one
     accTime = accTime - T0 + 1;
     accTime(accTime < 0) = 0;
-
-    s = segmentSeries(accTime);
-    goodFrames = s(2:2:end);
-    %goodFrames = [goodFrames{:}];
-    badFrames = s(1:2:end);
-    Lgood = cellfun(@length, goodFrames);
-    Lbad = cellfun(@length, badFrames);
-    segmentToKeep = find(Lgood > segmentDurationThreshold);
+    
+    try
+        
+        s = segmentSeries(accTime);
+        goodFrames = s(2:2:end);
+        %goodFrames = [goodFrames{:}];
+        badFrames = s(1:2:end);
+        Lgood = cellfun(@length, goodFrames);
+        Lbad = cellfun(@length, badFrames);
+        segmentToKeep = find(Lgood > segmentDurationThreshold);
+    catch ME
+        segmentToKeep = [];
+        goodFrames = [];
+    end
 end

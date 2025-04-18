@@ -1,101 +1,97 @@
 
 
-function avalanche_pipeline(params)
+function [flag,ME, avstats] = avalanche_pipeline(ImgF, subject_json, params, project)
+avstats = [];
+ME = [];%error handeling
+progress.iexp = subject_json.init.recid;
+progress.total = length(subject_json);
 
-
-flag = init_analysis(params);
-
-
-project_root = params.project_root;
-subject_jsons = dir([project_root '/derivatives/metadata/' params.dataset '/**/*.json']);
-
-
-
-%%
-
-%load mask and get network
-[mask, validPixels] = load_standard_mask(params);
-[adjmat,network] = distance_network(128,validPixels, params);
-
-
-for i = 1:length(subject_jsons)
-    ['iexp=' num2str(i)]
-
-    %get the json file
-    row = subject_jsons(i);
-    json = fileread([row.folder '/' row.name]);
-    json = jsondecode(json);
-
-    %set loading parameters. This can also be specified outside for looping
-    %through projects.
-    if ~exist('params', 'var')
-        params = struct(err = 0,...
-            warp = 1, ...
-            batch_blocks = 4, ...
-            tStep = 2000, ...
-            down_sample = 2, ...
-            thresh_list = [3]);
-    end
-
-    %get recording
+if ~isempty(ImgF)
     try
-        %get motion periods
-        [segs, goodFrames] = get_segments_to_keep(json, params);
-        ImgF = get_calcium_recording(json, params);
+        if params.run
+
+            
+
+            if isfield(params.ImgF_processing, 'down_sample')
+                if params.ImgF_processing.down_sample > 1
+
+
+                    [ImgF, validPixels, sz] = spatial_downsample_reshaped(ImgF, params.ImgF_processing.down_sample, params.ImgF_processing);
+                else
+                    [~, validPixels, sz] = load_standard_mask(params.ImgF_processing);
+                end
+            else
+                [~, validPixels, sz] = load_standard_mask(params.ImgF_processing);
+            end
+
+            %zscore
+            ImgF = nanzscore(ImgF')';
+
+
+            [adjmat,network] = distance_network(sz(1),validPixels, params.parameters);
+
+            %remove bad drames and bad pixels
+            trace = nansum(ImgF);
+            badFrames = find(trace == 0);
+            ImgF(:,badFrames) = 0;
+            bad_pixels = find(nansum(ImgF') == 0);
+            ImgF(bad_pixels, :) = 0;
+
+            
+
+
+
+            %get avalanches
+            %for th = 1:length(params.parameters.thresh_list)
+            thresh = params.parameters.threshold;
+
+            %                 step = ['avs_thresh_' num2str(thresh)];
+            %                 type = 'avalanches';
+            stepparams = struct(step = params.step, ...
+                type = params.type, ...
+                threshold = thresh, ...
+                hkradius = params.parameters.hkradius, ...
+                downsample = params.ImgF_processing.down_sample, ...
+                warp = project.raw_parameters.warp);
+
+            'Calculating Avalanches....'
+            [avstats,ME] = segmented_avalanche_analysis(ImgF, validPixels, adjmat, network, stepparams);
+            subject_json = update_json(subject_json, true, stepparams);
+            subject_json = save_avalanche_derivative(subject_json,avstats, stepparams, project);
+
+            save_json(subject_json, project)
+            'saved!'
+            %   clear stepparams
+            %end
+            %clear ImgF
+
+            %save progress
+
+            progress.time = datestr(now, 'yyyy-mm-ddTHH:MM:SS');
+            save(fullfile(params.calcium_analysis_root, [subject_json.init.dataset, 'progress.mat']), 'progress');
+            %end
+            flag = "finished!";
+        else
+            flag = "project run is off";
+        end
 
     catch ME
-        ME
-        json = update_json(json, false, struct(step = 'loading', type = '', message = ['iexp=' num2str(i) 'loadingfailed']));
-        continue
-    end
-
-    %downsample the FOV
-    ImgF = spatialBlockDownsample(ImgF, params.down_sample);
-    ImgF = zscore_independent(ImgF);
-
-    %filter good frames and get badframes
-    goodFrames = [goodFrames(cellfun(@length, goodFrames) > params.good_frames_thresh)];
-    badFrames = setdiff(1:size(ImgF,3), [goodFrames{:}]);
-
-    %set badframes to zero
-    ImgF(:,:,badFrames) = 0;
-
-    %reshape ImgF;
-    ImgF = reshape(ImgF, size(ImgF,1)*size(ImgF,2), size(ImgF,3));
-
-    %keep only valid pixels
-    ImgF = ImgF(validPixels,:);
-
-    %get avalanches
-    for th = 1:length(params.thresh_list)
-        thresh = params.thresh_list(th);
         
-        step = ['avs_thresh_' num2str(thresh)];
-        type = 'avalanches';
-        stepparams = struct(step = step, ...
-            type = type, ...
-            threshold = thresh, ...
-            hkradius = params.hkradius, ...
-            downsample = params.down_sample, ...
-            good_frames_threshold = params.good_frames_thresh, ...
-            warp = params.warp);
+        flag = 'something went wrong';
         
-        avstats = segmented_avalanche_analysis(ImgF, validPixels, adjmat, network, stepparams);
-        json = update_json(json, true, stepparams);
-        json = save_avalanche_derivative(json,avstats, stepparams);
+        progress.time = datestr(now, 'yyyy-mm-ddTHH:MM:SS');
+        progress.ME = ME;
+        save(fullfile(params.calcium_analysis_root, [subject_json.init.dataset, 'error.mat']), 'progress');
 
-        save_json(json)
-        'saved!'
-        clear stepparams
     end
-    clear ImgF 
-    
-    %save progress
-    progress.iexp = i;
-    progress.total = length(subject_jsons);
+else
+    flag = ['imgF is empty'];
     progress.time = datestr(now, 'yyyy-mm-ddTHH:MM:SS');
-    save([params.project 'progress'], 'progress');
+    progress.flag = flag;
+    save(fullfile(params.calcium_analysis_root, 'progress', [subject_json.init.dataset, 'error.mat']), 'progress');
+
+
 end
-%%
+
 end
 
