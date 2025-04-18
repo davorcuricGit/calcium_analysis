@@ -52,10 +52,15 @@ for i = 1:length(currentClusters)
 
         Av{parentLabels} = updateAvalanche_w_branches(Av{parentLabels}, t, length(c));
 
-        if isempty(childrencluster)
-            %this cluster is a branch
-            Av{parentLabels}.branches = [Av{parentLabels}.branches; reshape(c,[],1)];
-        end
+        %this is a continuation of the previous event so we remove the
+        %parent cluster and add this cluster
+        Av{parentLabels}.branches = setdiff(Av{parentLabels}.branches, parentcluster);
+        Av{parentLabels}.branches = [Av{parentLabels}.branches; reshape(c,[],1)];
+
+%         if isempty(childrencluster)
+%             %this cluster is a branch
+%             Av{parentLabels}.branches = [Av{parentLabels}.branches; reshape(c,[],1)];
+%         end
 
     elseif length(parentLabels) > 1
         %more than one parent

@@ -24,15 +24,22 @@ if ~isempty(ImgF)
                 [~, validPixels, sz] = load_standard_mask(params.ImgF_processing);
             end
 
+            %zscore
+            ImgF = nanzscore(ImgF')';
+
+
             [adjmat,network] = distance_network(sz(1),validPixels, params.parameters);
 
-            
+            %remove bad drames and bad pixels
             trace = nansum(ImgF);
             badFrames = find(trace == 0);
             ImgF(:,badFrames) = 0;
-
             bad_pixels = find(nansum(ImgF') == 0);
             ImgF(bad_pixels, :) = 0;
+
+            
+
+
 
             %get avalanches
             %for th = 1:length(params.parameters.thresh_list)
