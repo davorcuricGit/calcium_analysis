@@ -20,23 +20,31 @@ stepparams = struct(step = av_json.step, ...
 
 if ~isempty(ImgF)
     try
-        if params.run
+        if av_json.run
             %prep the recording by downsampling, removing bad frames,
             [ImgF, validPixels, sz] = spatial_downsample_reshaped(ImgF, av_json.ImgF_processing.down_sample, av_json.ImgF_processing);
 
             ImgF = nanzscore(ImgF')';
 
+            %remove bad drames and bad pixels
+            trace = nansum(ImgF);
+            badFrames = find(trace == 0);
             ImgF(:,badFrames) = 0;
             bad_pixels = find(nansum(ImgF') == 0);
             ImgF(bad_pixels, :) = 0;
 
             ImgF = ImgF > av_json.parameters.threshold;
 
+            goodFrames = get_non_zero_segments(nansum(ImgF));
+            
             %back to volume
             ImgF = embeddIntoFOV(ImgF, validPixels, sz);
             mask = embeddIntoFOV(validPixels, validPixels, sz);
             mask = mask > 0;
             
+            
+
+
             %get the network
             [~,network] = distance_network(sz(1),validPixels, av_json.parameters);
 

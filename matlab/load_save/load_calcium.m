@@ -68,13 +68,13 @@ try
             ImgF = nanzscore(ImgF')';
 
         end
-        end
-
-
-
-        subject_json = update_json(subject_json, true, struct(step = 'loading', type = '', message = 'success!'));
-        save_json(subject_json, params)
     end
+
+
+
+    subject_json = update_json(subject_json, true, struct(step = 'loading', type = '', message = 'success!'));
+    save_json(subject_json, params)
+
 catch ME
     subject_json = update_json(subject_json, false, struct(step = 'loading', type = '', message = ME));
     save_json(subject_json, params)
