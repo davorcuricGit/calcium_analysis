@@ -1,4 +1,4 @@
-function subnetwork = get_subnetworks(json, dorsalMaps, varargin)
+function [subnetwork, indiv_mask] = get_subnetworks(json, dorsalMaps, varargin)
 %get the subnetworks absed off of the subejcts individual mask. 
 %individual mask is affine warped in the same way as reocrding.
 %if a global mask is provided then it will filter any pixels not int he
@@ -36,6 +36,9 @@ i_p.parse(json, dorsalMaps, varargin{:});
         end
 
 
+    %remove any nonint pixels from the downsampling
+    intmask = indiv_mask == floor(indiv_mask);
+    indiv_mask = indiv_mask.*intmask;
 
     
 
