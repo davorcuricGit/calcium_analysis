@@ -40,6 +40,7 @@ else
 
             %Loading avalanches
             [avstats, ME] = load_derivative(subject_json,params.needs, project);
+            step_params.numAvs = length(avstats);
 
             %get allen subnetworks
             allen_subnets = readtable(fullfile(params.calcium_analysis_root, params.allen_subnets));
