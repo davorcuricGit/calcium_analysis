@@ -46,7 +46,7 @@ else
             allen_subnets = readtable(fullfile(params.calcium_analysis_root, params.allen_subnets));
 
             %get the per-subject subnetworks
-            [subnetwork, subnetworksFOV] = get_subnetworks(subject_json, params.dorsalMaps, ...
+            [subnetwork, subnetworksFOV] = get_allen_subnetworks(subject_json, params.dorsalMaps, ...
                 downsample = subject_json.(params.needs).downsample, ...
                 globalmask = project.ImgF_processing.mask_name);
 
@@ -63,7 +63,7 @@ else
             ME = [];
             conditionalmaps =[];
 
-            [term_map,act_map] = get_conditional_branch_map(avstats,validPixels,subnetworksFOV,allen_subnets, step_params);
+            [term_map,act_map, num_activations] = get_conditional_branch_map(avstats,validPixels,subnetworksFOV,allen_subnets, step_params);
 
             'saving maps...'
             step_params.type = 'term_map';
@@ -73,6 +73,10 @@ else
             step_params.type = 'act_map';
             subject_json = update_json_new(subject_json, true, step_params);
             [subject_json,ME] = save_derivative(subject_json,single(act_map), step_params, project);
+
+            step_params.type = 'num_activations';
+            subject_json = update_json_new(subject_json, true, step_params);
+            [subject_json,ME] = save_derivative(subject_json,single(num_activations), step_params, project);
 
             save_json(subject_json, project)
             'saved!'

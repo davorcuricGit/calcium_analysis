@@ -1,9 +1,9 @@
-function [termination_weighted_maps, activation_weighted_maps] = get_conditional_branch_map(avstats,validPixels,subnetworksFOV, allen_subnets, params)
+function [termination_weighted_maps, activation_weighted_maps,numactivations] = get_conditional_branch_map(avstats,validPixels,subnetworksFOV, allen_subnets, params)
 
 sz = params.sz;
 
 avstats = get_root_centroids(avstats,validPixels, params.sz);
-avstats = get_centroid_roilabel(avstats, subnetworksFOV);
+avstats = get_avcentroid_roilabel(avstats, subnetworksFOV);
 
 T = struct2table(avstats);
 T = T(T.merge_flag == 0,:);
@@ -12,8 +12,11 @@ T = T(T.rootsubnet ~= 0,:);
 
 termination_weighted_maps = zeros(sz(1),sz(2),64);
 activation_weighted_maps = zeros(sz(1),sz(2),64);
+numactivations = zeros(1,64);
 for r = 1:height(allen_subnets)
+    %get the 
     idx = find(T.rootsubnet == allen_subnets.roi(r));
+    numactivations(r) = length(idx);
     for ii = 1:length(idx)
         branch = T.branches(idx(ii)) ;
         

@@ -1,4 +1,4 @@
-function [subnetwork, indiv_mask] = get_allen_subnetworks(json, dorsalMaps, varargin)
+function [subnetwork, indiv_mask, area] = get_allen_subnetworks(json, dorsalMaps, varargin)
 %get the 64 subnetworks based off of the subejcts individual allen mask. 
 %individual mask is affine warped in the same way as reocrding.
 %if a global mask is provided then it will filter any pixels not int he
@@ -40,15 +40,11 @@ i_p.parse(json, dorsalMaps, varargin{:});
     intmask = indiv_mask == floor(indiv_mask);
     indiv_mask = indiv_mask.*intmask;
 
-    
-
     allen_subnet_idx = 1:64;
     
     subnetwork = {};
-    area = zeros(size(allen_subnet_idx));
     for i = 1:length(allen_subnet_idx)
-        subnetwork{i} = find(indiv_mask == uq(i));
-        area(i) = length(subnetwork{i});
+        subnetwork{i} = find(indiv_mask == allen_subnet_idx(i));
     end
 end
 
