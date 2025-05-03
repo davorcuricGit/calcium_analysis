@@ -20,10 +20,6 @@ derivative = [];
 ME = [];
 
 try
-    % Construct the full file path
-    %path = fullfile(project.project_root, project.project_name, project.structure.derivatives, json.init.raw_path);
-    %floc = fullfile(path, [json.(params.step).name, params.derivative_extension]);
-
     % Check if file exists
     if ~isfile(floc)
         ME = 'File does not exist';
