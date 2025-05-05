@@ -1,4 +1,4 @@
-function [ImgF, segs, goodFrames, badFrames, subject_json, ME] = load_calcium(subject_json, params)
+function [ImgF, segs, goodFrames, badFrames, subject_json,validPixels, ME] = load_calcium(subject_json, params)
 
 %set loading parameters. This can also be specified outside for looping
 %through projects.
