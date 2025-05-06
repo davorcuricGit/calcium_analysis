@@ -1,0 +1,15 @@
+{
+    "name": "avalanche_analysis",
+    "run": true,
+    "script": "get_avalanches",
+    "type" : "avalanches",
+    "calcium_analysis_root": "/home/dcuric/Documents/calciumAnalysis/",
+    "ImgF_processing": {
+        "down_sample" : 2,
+        "mask_name": "/home/dcuric/Documents/calciumAnalysis/maskDavor.mat"
+    },
+        "parameters": {
+        "hkradius": 8,
+        "thresh": [3]
+        }
+}

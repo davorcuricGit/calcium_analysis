@@ -7,6 +7,7 @@ ImgF = [];
 segs = [];
 goodFrames = [];
 badFrames = [];
+validPixels = [];
 
 if ~exist('params', 'var')
     params = struct(err = 0,...

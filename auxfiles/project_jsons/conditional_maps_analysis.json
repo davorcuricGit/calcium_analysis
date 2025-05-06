@@ -1,0 +1,13 @@
+{
+    "name": "conditionalbranches_analysis",
+    "run": true,
+    "script": "branchmap_pipeline",
+    "type" : "avalanches",
+    "calcium_analysis_root": "/home/dcuric/Documents/calciumAnalysis/",
+    "allen_subnets" : "/codes/auxfiles/allen_subnetworks.csv",
+    "needs" : "avs_thresh_",
+    "parameters": {
+        "hkradius": 8,
+        "thresh": [3]
+        }
+}

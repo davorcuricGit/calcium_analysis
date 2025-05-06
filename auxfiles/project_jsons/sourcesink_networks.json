@@ -1,0 +1,11 @@
+{
+    "name": "sourcesink_networks",
+    "run": true,
+    "script": "sourcesink_network_pipeline",
+    "calcium_analysis_root": "/home/dcuric/Documents/calciumAnalysis/",
+    "allen_subnets" : "/codes/auxfiles/allen_subnetworks.csv",
+    "needs" : "conditional_branch_map_thresh_",
+    "parameters": {
+        "hkradius": 8
+        }
+}

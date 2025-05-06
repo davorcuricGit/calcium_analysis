@@ -1,0 +1,8 @@
+{
+    "name": "gen_fc_derivatives",
+    "run": true,
+    "type" : "FC",
+    "len_control" : 5000,
+    "calcium_analysis_root": "/home/dcuric/Documents/calciumAnalysis/",
+    "allen_subnets" : "/codes/auxfiles/allen_subnetworks.csv"
+}

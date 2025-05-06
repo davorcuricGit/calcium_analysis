@@ -1,0 +1,30 @@
+{
+    "project_name": "acute_stress",
+    "project_root": "/scratch4/calcium_data/projects/",
+    "structure": {
+        "raw_data": "raw_data",
+        "derivatives": "derivatives",
+        "metadata": "metadata",
+        "results": "results"
+    },
+    "raw_parameters": {
+        "down_sample": 2,
+        "warp": 1,
+        "err": 0,
+        "batch_blocks":4,
+        "good_frames_thresh" : 500
+    },
+    "ImgF_processing": {
+        "reshape" : true,
+        "badFramesNaN": true,
+        "remove_masked_pixels" : true,
+        "mask_name" : "/home/dcuric/Documents/calciumAnalysis/maskDavor.mat"
+    },
+    "calcium_analysis_root" : "/home/dcuric/Documents/calciumAnalysis/",
+    "paths_to_add": [
+        "/codes/matlab/"
+    ],
+    "files_to_load" : ["/codes/matlab/auxfiles/allenDorsalMap_donovan.mat"],
+    "log_file": "project_log.txt",
+    "version": "2025-04-11"
+}

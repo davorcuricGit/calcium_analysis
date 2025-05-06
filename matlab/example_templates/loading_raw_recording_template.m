@@ -33,16 +33,15 @@ for p = 1:height(project_lists)
         row = subject_jsons(i);
         json = fileread([row.folder '/' row.name]);
         json = jsondecode(json);
-stop
+
         %load calcium recording
-        %project.raw_parameters.tSteps = 1000;
+        project.raw_parameters.tSteps = 1000;
         [ImgF, segs, goodFrames, badFrames, json,validPixels, ME] = load_calcium(json,project);
 
-
-        dmeta = json.(av_json.needs);
-        dmeta.derivative_extension = '.csv';
-        dmeta.format = 'matrix';
-        [ts,ME] = get_needed_derivative(dmeta, json, project);
+        av_json.needs = 'subnet_time_series';
+        av_json.type = 'allen_subnets_timeseries';
+        dmeta = json.(av_json.needs).(av_json.type);
+        [v,ME] = get_needed_derivative(dmeta, json, project);
 
     stop
        clear ImgF

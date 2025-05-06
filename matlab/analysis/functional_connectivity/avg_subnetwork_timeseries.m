@@ -17,11 +17,11 @@ function [v, nanidx] = avg_subnetwork_timeseries(ImgF, subnetworks, params);
         end
 
         
-        v(i,:) = zscore(nanmean(ImgF(px,:)));
+        v(i,:) = nanzscore(nanmean(ImgF(px,:)));
         
     end
     
-    nanidx = sum(v');
-    nanidx = find(isnan(nanidx));
+    nanidx = nansum(v')';
+    nanidx = find(nanidx == 0);
 
 end
