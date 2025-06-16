@@ -490,40 +490,6 @@ def gini(x, w=None):
         # The above formula, with all weights equal to 1 simplifies to:
         return (n + 1 - 2 * np.sum(cumx) / cumx[-1]) / n
 
-def average_hemisphere_graphs(G_left, G_right):
-    # 1. Find common nodes
-    common_nodes = set(G_left.nodes).intersection(set(G_right.nodes))
-
-    # 2. Create averaged graph
-    G_avg = nx.DiGraph()
-
-    for node in common_nodes:
-        attr_left = G_left.nodes[node]
-        attr_right = G_right.nodes[node]
-
-        avg_activation = (attr_left['activation'] + attr_right['activation']) / 2
-        avg_area = (attr_left['area'] + attr_right['area']) / 2
-
-        pos_left = attr_left['pos']
-        pos_right = attr_right['pos']
-        avg_pos = ((pos_left[0] + 0*pos_right[0]) / 1, (pos_left[1] + 0*pos_right[1]) / 1)
-
-        G_avg.add_node(node, activation=avg_activation, area=avg_area, pos=avg_pos)
-
-    # 3. Average edges
-    for src in common_nodes:
-        for tgt in common_nodes:
-            if src == tgt:
-                continue
-
-            w_left = G_left[src][tgt]['weight'] if G_left.has_edge(src, tgt) else 0
-            w_right = G_right[src][tgt]['weight'] if G_right.has_edge(src, tgt) else 0
-            avg_weight = (w_left + w_right) / 2
-
-            if avg_weight > 0:
-                G_avg.add_edge(src, tgt, weight=avg_weight)
-
-    return G_avg
 
 def compare_metrics_as_bars(node_df, metric, reference):
     # Ensure seaborn styling
@@ -691,3 +657,10 @@ def generate_multiple_surrogates(G, n_surrogates, seed=None):
 
     return surrogates
 
+def flatten_list(my_list):
+    return [x for xs in my_list for x in xs]
+
+def nanzscore(X):
+    X = X - np.nanmean(X)
+    X = X/np.nanstd(X)
+    return X

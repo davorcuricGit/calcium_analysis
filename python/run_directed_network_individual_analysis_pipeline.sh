@@ -2,17 +2,22 @@
 
 set -e  # stop on error
 
+export PYTHONPATH=/home/dcuric/Documents/calciumAnalysis/codes/python:$PYTHONPATH
+
 echo "Running make_individual_GML_graphs_step0.py"
-python3 make_individual_GML_graphs_step0.py
+python3 ./persubject_codes/make_individual_GML_graphs_step0.py
 
 echo "Running make_individual_FCGML_graphs_step0.py"
-python3 make_individual_FCGML_graphs_step0.py
+python3 ./persubject_codes/make_individual_FCGML_graphs_step0.py
 
 echo "Running make_individual_LRavgd_graphs_step1.py"
-python3 make_individual_LRavgd_graphs_step1.py
+python3 ./persubject_codes/make_individual_LRavgd_graphs_step1.py
 
 echo "Running make_individual_graphstats_step2.py"
-python3 make_individual_graphstats_step2.py
+python3 ./persubject_codes/make_individual_graphstats_step2.py
+
+echo "Running compare_against_allen.py"
+python3 compare_against_allen.py
 
 # echo "Running make_avg_graph_stats_step3.py"
 # python3 make_avg_graph_stats_step3.py

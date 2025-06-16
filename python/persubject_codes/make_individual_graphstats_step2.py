@@ -86,7 +86,7 @@ def calculate_node_proprties(G, key):
 map_type = 'act_map'
 need_step = map_type + '_event_graph'
 graphs_list = dict()
-
+thresh = 1
 # Loop over subjects
 for i, subject_file in enumerate(subject_jsons):
     #try:

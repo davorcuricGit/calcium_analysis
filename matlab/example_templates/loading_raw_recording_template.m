@@ -28,14 +28,14 @@ for p = 1:height(project_lists)
     av_json.type = 'avalanches';
 
     %loop over subjects
-    for i = 1%:length(subject_jsons)
+    for i = 2%:length(subject_jsons)
 
         row = subject_jsons(i);
         json = fileread([row.folder '/' row.name]);
         json = jsondecode(json);
 
         %load calcium recording
-        project.raw_parameters.tSteps = 1000;
+        %project.raw_parameters.tSteps = 5000;
         [ImgF, segs, goodFrames, badFrames, json,validPixels, ME] = load_calcium(json,project);
 
         av_json.needs = 'subnet_time_series';

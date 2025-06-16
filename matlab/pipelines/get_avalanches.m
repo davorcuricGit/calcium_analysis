@@ -79,8 +79,9 @@ if ~isempty(ImgF)
             end
             
             %save derivative and update json
-            subject_json = update_json(subject_json, true, stepparams);
-            subject_json = save_avalanche_derivative(subject_json,all_clusters, stepparams, project);
+            subject_json = update_json_new(subject_json, true, stepparams);
+            [subject_json,ME] = save_derivative(subject_json,all_clusters, step_params, project);
+            %subject_json = save_avalanche_derivative(subject_json,all_clusters, stepparams, project);
 
             save_json(subject_json, project)
         

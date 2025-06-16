@@ -1,0 +1,8 @@
+#ignore python checkpoint files
+**/*.ipynb_checkpoints/
+
+#ignore matlab asv files
+*.asv
+
+#misc
+*.xlsx#

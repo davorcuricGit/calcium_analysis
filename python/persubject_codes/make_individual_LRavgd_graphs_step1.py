@@ -1,5 +1,41 @@
 from init_analysis import *
 
+def average_hemisphere_graphs(G_left, G_right):
+    # 1. Find common nodes
+    common_nodes = set(G_left.nodes).intersection(set(G_right.nodes))
+
+    # 2. Create averaged graph
+    G_avg = nx.DiGraph()
+
+    for node in common_nodes:
+        attr_left = G_left.nodes[node]
+        attr_right = G_right.nodes[node]
+
+        avg_activation = (attr_left['activation'] + attr_right['activation']) / 2
+        avg_area = (attr_left['area'] + attr_right['area']) / 2
+
+        pos_left = attr_left['pos']
+        pos_right = attr_right['pos']
+        avg_pos = ((pos_left[0] + 0*pos_right[0]) / 1, (pos_left[1] + 0*pos_right[1]) / 1)
+
+        G_avg.add_node(node, activation=avg_activation, area=avg_area, pos=avg_pos)
+
+    # 3. Average edges
+    for src in common_nodes:
+        for tgt in common_nodes:
+            #if src == tgt:
+            #    continue
+
+            w_left = G_left[src][tgt]['weight'] if G_left.has_edge(src, tgt) else 0
+            w_right = G_right[src][tgt]['weight'] if G_right.has_edge(src, tgt) else 0
+            avg_weight = (w_left + w_right) / 2
+
+            if avg_weight > 0:
+                G_avg.add_edge(src, tgt, weight=avg_weight)
+
+    return G_avg
+
+
 #######################################
 
 #make a graph that averages the left and right hemispheres together
@@ -9,6 +45,7 @@ step_name = map_type + '_event_graph'
 
 need_step = step_name
 graphs_list = dict()
+thresh = 1
 
 # Loop over subjects
 for i, subject_file in enumerate(subject_jsons):
@@ -38,7 +75,7 @@ for i, subject_file in enumerate(subject_jsons):
     GL = nx.relabel_nodes(GL, {node: node[0:-1].strip() for node in GL.nodes()})
     GR = nx.relabel_nodes(GR, {node: node[0:-1].strip() for node in GR.nodes()})
 
-    G = my.average_hemisphere_graphs(GL, GR)
+    G = average_hemisphere_graphs(GL, GR)
 
     step_name = map_type + '_LRavgd_graph' + '_thresh=' + str(thresh)
     save_dir = subject_json['init']['project_root'] + subject_json['init']['derivative_path']
