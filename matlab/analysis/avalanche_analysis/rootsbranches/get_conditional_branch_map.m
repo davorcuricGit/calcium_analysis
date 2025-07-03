@@ -8,7 +8,7 @@ avstats = get_avcentroid_roilabel(avstats, subnetworksFOV);
 T = struct2table(avstats);
 T = T(T.merge_flag == 0,:);
 T = T(T.rootsubnet ~= 0,:);
-T = T(T.duration < 10,:);
+T = T(T.duration < 2,:);
 
 termination_weighted_maps = zeros(sz(1),sz(2),64);
 activation_weighted_maps = zeros(sz(1),sz(2),64);
