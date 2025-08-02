@@ -17,7 +17,7 @@ import json
 
 
 
-def init_analysis(calcium_dir):
+def init_analysis(calcium_dir, projectidx = 0):
     ## initialization stuff
     # Base directory
     
@@ -32,7 +32,7 @@ def init_analysis(calcium_dir):
     # Load the list of projects for this computer
     project_list_path = calcium_dir / 'project_lists' / f'{computer}_project_lists.txt'
     project_lists = pd.read_csv(project_list_path, header=None)
-    project_path = project_lists.iloc[0, 0]
+    project_path = project_lists.iloc[projectidx, 0]
     with open(project_path, 'r') as f:
         project = json.load(f)
     
@@ -89,7 +89,7 @@ def get_needed_derivative(dmeta, subject_json, project):
     floc = os.path.join(project['project_root'],
                         project['project_name'], 
                         project['structure']['derivatives'])
-    floc += subject_json['init']['raw_path'] + '/' + file_name
+    floc += '/' + subject_json['init']['raw_path'] + '/' + file_name
     
     
     

@@ -40,12 +40,10 @@ def average_hemisphere_graphs(G_left, G_right):
 
 #make a graph that averages the left and right hemispheres together
 
-map_type = 'act_map'
 step_name = map_type + '_event_graph'
 
 need_step = step_name
 graphs_list = dict()
-thresh = 1
 
 # Loop over subjects
 for i, subject_file in enumerate(subject_jsons):
@@ -57,7 +55,7 @@ for i, subject_file in enumerate(subject_jsons):
 
         # Load nodes
     try :
-        file_name = subject_json[need_step]['thresh=' + str(thresh)]['save_name']
+        file_name = subject_json[need_step][tag + 'thresh=' + str(thresh)]['save_name']
     except:
         print('need_step likely does not exist, i = ' + str(i))
         continue
@@ -77,11 +75,11 @@ for i, subject_file in enumerate(subject_jsons):
 
     G = average_hemisphere_graphs(GL, GR)
 
-    step_name = map_type + '_LRavgd_graph' + '_thresh=' + str(thresh)
+    step_name = map_type + '_LRavgd_graph' + tag + '_thresh=' + str(thresh)
     save_dir = subject_json['init']['project_root'] + subject_json['init']['derivative_path']
 
-    subject_json[need_step]['thresh=' + str(thresh)]['left_right_avgd'] = step_name
-    nx.write_gml(G, save_dir + '/' + subject_json[need_step]['thresh=' + str(thresh)]['left_right_avgd'] + '.gml')
+    subject_json[need_step][tag + 'thresh=' + str(thresh)]['left_right_avgd'] = step_name
+    nx.write_gml(G, save_dir + '/' + subject_json[need_step][tag + 'thresh=' + str(thresh)]['left_right_avgd'] + '.gml')
     
     with open(subject_file, 'w') as f:
         json.dump(subject_json, f)

@@ -47,11 +47,29 @@ for i, subject_file in enumerate(subject_jsons):
    
     try:
         fname = subject_json['len_control_FC']['name']
+        if subject_json['len_control_FC']['derivative_extension'] not in fname:
+            fname += subject_json['len_control_FC']['derivative_extension']
+            
         fc = pd.read_csv(path_name + fname, sep=',', header=None)
-    except:
-        print('fc does not exist, i = ' + str(i))
-        continue
-    
+    except Exception as e1:
+
+        #sometimes the json structure is different so this ngihtmare of a nested try tries to accomodate.
+        #probably a better way to do this....
+        try:
+            fname = subject_json['FC']['FC_len_control']['name']
+            if subject_json['FC']['FC_len_control']['derivative_extension'] not in fname:
+                fname += subject_json['FC']['FC_len_control']['derivative_extension']
+            
+            fc = pd.read_csv(path_name + fname, sep=',', header=None)
+        except Exception as e2:
+            print(e1)
+            print(e2)
+            #print('fc does not exist, i = ' + str(i))
+            #print('path:' + path_name)
+            #print(subject_json['FC'])
+            print('')
+            continue
+        
     
     fc = fc.values
     
@@ -98,8 +116,17 @@ for i, subject_file in enumerate(subject_jsons):
 
     G = average_hemisphere_graphs(GL, GR)
 
-    subject_json['len_control_FC']['gml'] = 'FC_len_control.gml'
-    nx.write_gml(G, path_name + '/' +  subject_json['len_control_FC']['gml'])
+    try:
+        subject_json['len_control_FC']['gml'] = 'FC_len_control.gml'
+        nx.write_gml(G, path_name + '/' +  subject_json['len_control_FC']['gml'])
+    except:
+        try:
+            subject_json['FC']['FC_len_control']['gml'] = 'FC_len_control.gml'
+            nx.write_gml(G, path_name + '/' +  subject_json['FC']['FC_len_control']['gml'])
+        except:
+            print('something went wrong I dont know how you got here lol')
+    
+    
 
     with open(subject_file, 'w') as f:
         json.dump(subject_json, f)

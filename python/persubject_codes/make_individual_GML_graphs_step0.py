@@ -7,9 +7,6 @@ from init_analysis import *
 
 #generate subject graphs
 remove_self_loops = False
-map_type = 'act_map'
-# Set step parameters
-thresh = 1
 
 avg_graphs = dict()
 graph_list = dict()
@@ -33,7 +30,7 @@ for i, subject_file in enumerate(subject_jsons):
      # Set step parameters
     thresh = 1
     av_json['parameters']['threshold'] = thresh
-    av_json['needs'] = f'event_network_thresh_{thresh}'
+    av_json['needs'] = f'event_network_{tag}thresh_{thresh}'
     av_json['type'] = 'avalanches'
     
     # Load nodes
@@ -59,6 +56,9 @@ for i, subject_file in enumerate(subject_jsons):
     if 'cohort' in condition:
         condition = re.sub(r'_cohort\d+', '', condition)
 
+    print(dmeta)
+    
+    
     G = my.make_graph(nodes, edges, condition)
     
     #add the selfloops as a node attribute
@@ -85,9 +85,9 @@ for i, subject_file in enumerate(subject_jsons):
     #save the averaged graphs
     save_dir = subject_json['init']['project_root'] + subject_json['init']['derivative_path']#my.check_if_dir_exists(str(result_dir) + '/' + 'individual_graphs/graphs/' + 'recid=' + str(i) + '_id=' + str(subject_json['init']['uniqueid']))
     subject_json[step_name] = dict()
-    subject_json[step_name]['thresh=' + str(thresh)] = {'path': str(save_dir) + '/' + step_name,
+    subject_json[step_name][tag + 'thresh=' + str(thresh)] = {'path': str(save_dir) + '/' + step_name,
                                         'save_dir': str(save_dir),
-                                        'save_name': step_name + '_thresh=' + str(thresh),
+                                        'save_name': step_name + tag + '_thresh=' + str(thresh),
                                         'format' : 'gml',
                                         'num_nodes' : len(G.nodes()),
                                         'num_edges' : len(G.edges()),
@@ -96,11 +96,12 @@ for i, subject_file in enumerate(subject_jsons):
                                         'connected' : nx.is_strongly_connected(G),
                                         'map_type' : map_type
                                        }
-    meta[step_name][i] = subject_json[step_name]['thresh=' + str(thresh)] 
+    #meta[step_name][i] = subject_json[step_name]['thresh=' + str(thresh)] 
     #save the graph as gephi file
-    nx.write_gml(G, save_dir + '/' + subject_json[step_name]['thresh=' + str(thresh)]['save_name'] + '.gml')
+    nx.write_gml(G, save_dir + '/' + subject_json[step_name][tag + 'thresh=' + str(thresh)]['save_name'] + '.gml')
     with open(subject_file, 'w') as f:
         json.dump(subject_json, f)
+
     
 
 # #df = pd.DataFrame({'keys' : index, 'cond': label, 'mouse': mouse, 'uniqueid': uqid})

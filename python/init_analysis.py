@@ -23,12 +23,16 @@ import functions as my
 importlib.reload(my)
 
 calcium_dir = Path.home() / 'Documents' / 'calciumAnalysis'
-info = my.init_analysis(calcium_dir)
+info = my.init_analysis(calcium_dir, projectidx = 0)
 computer = info['computer']
 project = info['project']
 subject_jsons = info['subject_jsons']
 av_json = info['av_json']
 reference = info['reference']
+
+thresh = 1
+tag = 'radius_8'#'shortavsL2'
+map_type = 'act_map'
 
 result_dir = calcium_dir / 'event_based_networks' / 'python' / 'results' / computer
 if not os.path.exists(result_dir):
@@ -38,5 +42,5 @@ if not os.path.exists(result_dir):
 __all__ = [
     'np','json', 'plt', 'pd', 'os', 'Path', 're', 'nx', 'random', 'combinations',
     'math', 'pickle', 'my', 'calcium_dir', 'computer', 'project',
-    'subject_jsons', 'av_json', 'reference', 'result_dir'
+    'subject_jsons', 'av_json', 'reference', 'result_dir', 'thresh', 'tag', 'map_type'
 ]

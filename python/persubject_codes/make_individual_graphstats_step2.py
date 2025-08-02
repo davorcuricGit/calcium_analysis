@@ -83,10 +83,9 @@ def calculate_node_proprties(G, key):
 
 #calculate graph stats
 
-map_type = 'act_map'
 need_step = map_type + '_event_graph'
 graphs_list = dict()
-thresh = 1
+
 # Loop over subjects
 for i, subject_file in enumerate(subject_jsons):
     #try:
@@ -95,7 +94,7 @@ for i, subject_file in enumerate(subject_jsons):
 
     # Load nodes
     try :
-        file_name = subject_json[need_step]['thresh=' + str(thresh)]['left_right_avgd']
+        file_name = subject_json[need_step][tag + 'thresh=' + str(thresh)]['left_right_avgd']
     except:
         print('need_step likely does not exist, i = ' + str(i))
         continue
@@ -107,6 +106,6 @@ for i, subject_file in enumerate(subject_jsons):
     stats_df,G = calculate_node_proprties(G, i)
     save_dir = subject_json['init']['project_root'] + subject_json['init']['derivative_path']
 
-    nx.write_gml(G, save_dir + '/' + subject_json[need_step]['thresh=' + str(thresh)]['left_right_avgd'] + '.gml')
+    nx.write_gml(G, save_dir + '/' + subject_json[need_step][tag + 'thresh=' + str(thresh)]['left_right_avgd'] + '.gml')
 
  
