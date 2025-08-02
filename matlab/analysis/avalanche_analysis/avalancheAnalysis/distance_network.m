@@ -1,4 +1,4 @@
-function [A,edge_list] = distance_network(N,validPixels,params)
+function [A,edge_list] = distance_network(N,validPixels,hkradius)
 % Parameters
 %N Size of the grid (N x N)
 %R Radius
@@ -14,7 +14,7 @@ distances = pdist(coords, 'euclidean');
 distanceMatrix = squareform(distances);
 
 % Create adjacency matrix based on the radius R
-A = distanceMatrix <= params.hkradius;
+A = distanceMatrix <= hkradius;
 
 % Ensure diagonal elements are zero (no self-loops)
 A(1:size(A, 1) + 1:end) = 0;
