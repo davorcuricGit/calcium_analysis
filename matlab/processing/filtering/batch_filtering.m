@@ -8,7 +8,7 @@ for n = 1:length(lines)
     d = dir(fullfile(lines{n},'**','*fChan.dat'));
     folders = [folders {d.folder}]
 end
-
+%
 band = [0.1 15];
 %
 for i = 1:length(folders)

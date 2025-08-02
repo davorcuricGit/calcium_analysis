@@ -62,7 +62,7 @@ if ~isempty(ImgF)
 
                 CC = bwconncomp(f, 6);
                 labels3D = labelmatrix(CC);     % H×W×T of cluster IDs
-                labeled = labels3D.*uint8(ImgF(:,:,goodFrames{s})); %remove the dilation
+                labeled = single(labels3D).*single(ImgF(:,:,goodFrames{s})); %remove the dilation
                 labeled = reshape(labeled, prod(sz), length(goodFrames{s}));
                 labeled = labeled(validPixels, :);
 
@@ -80,12 +80,22 @@ if ~isempty(ImgF)
             
             %save derivative and update json
             subject_json = update_json_new(subject_json, true, stepparams);
-            [subject_json,ME] = save_derivative(subject_json,all_clusters, step_params, project);
-            %subject_json = save_avalanche_derivative(subject_json,all_clusters, stepparams, project);
+            stepparams.derivative_extension = '.mat';
+            [subject_json,ME] = save_derivative(subject_json,all_clusters, stepparams, project);
+            if ~isempty(ME)
+                
+                flag = 'failed to save derivative'
+
+            else
+
+%subject_json = save_avalanche_derivative(subject_json,all_clusters, stepparams, project);
 
             save_json(subject_json, project)
         
             flag = 'success!'
+
+            end
+            
         else
             flag = "project run is off"
         end
