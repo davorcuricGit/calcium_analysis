@@ -7,7 +7,10 @@ ME = [];
 
 %check that avalanches exist
 threshold = params.parameters.threshold;
-params.needs = [params.needs num2str(threshold)];
+%params.needs = [params.needs num2str(threshold)];
+params.needs = ['avs_thresh_' num2str(threshold) '_hkradius_' num2str(params.parameters.hkradius)];
+
+params.needs = strrep(params.needs, '.', 'p');
 
 if ~isfield(subject_json, [params.needs])
     ME = 'avalanches not yet calculated!';
@@ -43,10 +46,10 @@ else
 
             
             %get valid Pixels
-            [~, validPixels, ~] = load_standard_mask(project.ImgF_processing);
+            [mask, validPixels, ~] = load_standard_mask(project.ImgF_processing);
             [~,validPixels,~] = spatial_downsample_reshaped(validPixels, ...
                 subject_json.(params.needs).downsample, ...
-                struct(mask_name = project.ImgF_processing.mask_name) ...
+                mask ...
                 );
 
 

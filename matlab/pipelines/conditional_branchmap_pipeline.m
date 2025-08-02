@@ -7,7 +7,11 @@ ME = [];
 
 %check that avalanches exist
 threshold = params.parameters.threshold;
-params.needs = [params.needs num2str(threshold)];
+%params.needs = [params.needs num2str(threshold)];
+params.needs = ['avs_thresh_' num2str(threshold) '_hkradius_' num2str(params.parameters.hkradius)];
+
+params.needs = strrep(params.needs, '.', 'p');
+
 
 if ~isfield(subject_json, [params.needs])
     ME = 'avalanches not yet calculated!';
@@ -51,11 +55,15 @@ else
                 globalmask = project.ImgF_processing.mask_name);
 
             %get valid Pixels
-            [~, validPixels, ~] = load_standard_mask(project.ImgF_processing);
-            [~,validPixels,~] = spatial_downsample_reshaped(validPixels, ...
+            [mask, validPixels, ~] = load_standard_mask(project.ImgF_processing);
+             [~,validPixels,~] = spatial_downsample_reshaped(validPixels, ...
                 subject_json.(params.needs).downsample, ...
-                struct(mask_name = project.ImgF_processing.mask_name) ...
+                mask ...
                 );
+%             [~,validPixels,~] = spatial_downsample_reshaped(validPixels, ...
+%                 subject_json.(params.needs).downsample, ...
+%                 struct(mask_name = project.ImgF_processing.mask_name) ...
+%                 );
 
 
             'Calculating Conditional Branch Maps....'
@@ -87,7 +95,7 @@ else
 
 
     catch ME
-        flag = 'something went wrong'
+        flag = ME
         progress.time = datestr(now, 'yyyy-mm-ddTHH:MM:SS');
         progress.ME = ME;
         save(fullfile(params.calcium_analysis_root, [subject_json.init.dataset, 'error.mat']), 'progress');

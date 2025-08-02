@@ -1,7 +1,8 @@
-function [ImgF, cgvp, sz] = spatial_downsample_reshaped(ImgF,down_sample, params)
+function [ImgF, cgvp, sz] = spatial_downsample_reshaped(ImgF,down_sample, mask)
 %this takes in a NxT raster and downsamples it spatially
 
-[mask, validPixels] = load_standard_mask(params);
+%[mask, validPixels] = load_standard_mask(params);
+validPixels = find(mask ~= 0);
 
 %down_sample = params.down_sample;
 vpFOV = embeddIntoFOV(validPixels, validPixels, size(mask));
