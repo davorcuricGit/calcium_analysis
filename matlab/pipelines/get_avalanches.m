@@ -18,11 +18,25 @@ stepparams = struct(step = av_json.step, ...
     downsample = av_json.ImgF_processing.down_sample, ...
     warp = project.raw_parameters.warp);
 
+if isfield(av_json.parameters, 'temporal_downsample')
+    stepparams.temporal_downsample = av_json.parameters.temporal_downsample;
+end
+
+if isfield(av_json.parameters, 'overlap')
+    stepparams.overlap = av_json.parameters.overlap;
+end
+
+% load the mask this likely needs a better appraoch
+load(av_json.ImgF_processing.mask_name)
+mask = Mask_Davor;
+mask = spatialBlockDownsample(mask, av_json.ImgF_processing.down_sample, false);
+
+
 if ~isempty(ImgF)
     try
         if av_json.run
             %prep the recording by downsampling, removing bad frames,
-            [ImgF, validPixels, sz] = spatial_downsample_reshaped(ImgF, av_json.ImgF_processing.down_sample, av_json.ImgF_processing);
+            [ImgF, validPixels, sz] = spatial_downsample_reshaped(ImgF, av_json.ImgF_processing.down_sample, mask);
 
             ImgF = nanzscore(ImgF')';
 
