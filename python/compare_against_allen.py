@@ -108,10 +108,10 @@ def get_edge_comparison_df(df_sub):
 
 
 #################################gather graphs into a dataframe
-map_type = 'act_map'
+
 need_step = map_type + '_event_graph'
 graphs = dict()
-thresh = 1
+
 for i, subject_file in enumerate(subject_jsons):
     #try:
     with open(subject_file, 'r') as f:
@@ -122,12 +122,19 @@ for i, subject_file in enumerate(subject_jsons):
     # Load nodes
     try :
         #get the event based network
-        en_name = subject_json[need_step]['thresh=' + str(thresh)]['left_right_avgd']
+        en_name = subject_json[need_step][tag + 'thresh=' + str(thresh)]['left_right_avgd']
 
         #get the functional connectome
-        fc_name = subject_json['len_control_FC']['gml']
-    except:
-        print('need_step likely does not exist, i = ' + str(i))
+        try:
+            fc_name = subject_json['len_control_FC']['gml']
+        except:
+            fc_name = subject_json['FC']['FC_len_control']['gml']
+            
+            
+            
+    except Exception as e:
+        print(e)
+        #print('need_step likely does not exist, i = ' + str(i))
         continue
         
     # Extract label
@@ -268,10 +275,10 @@ for i,cond in enumerate(condition_list):
     plt.tight_layout()
     #plt.show()
     
-    plt.savefig(save_dir + 'adjmats_comparison.png')
+    plt.savefig(save_dir + 'adjmats_comparison' + tag + '.png')
 
     calcium_export = pd.DataFrame(A_EN)
-    calcium_export.to_csv(save_dir + 'events_based_adjmat.csv')
+    calcium_export.to_csv(save_dir + 'events_based_adjmat' + tag + '.csv')
     
     
     
@@ -297,7 +304,7 @@ for i,cond in enumerate(condition_list):
     asymmetric_error = [lower_errors, upper_errors]
 
     df_to_export = pd.DataFrame({'pair': labels, 'correlation': rlist, 'pvalue': pvlist, 'error_low': lower_errors, 'error_high': upper_errors})
-    df_to_export.to_csv(save_dir + 'correlation_table.csv')
+    df_to_export.to_csv(save_dir + 'correlation_table' + tag + '.csv')
     
     plt.figure(figsize = (3,3))
     x = range(len(labels))
@@ -309,7 +316,7 @@ for i,cond in enumerate(condition_list):
     ax.spines['right'].set_visible(False)
     
     plt.tight_layout()
-    plt.savefig(save_dir + 'adjmats_correlations.png')
+    plt.savefig(save_dir + 'adjmats_correlations' + tag + '.png')
 
 
 

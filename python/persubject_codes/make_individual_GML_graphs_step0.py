@@ -32,10 +32,11 @@ for i, subject_file in enumerate(subject_jsons):
     av_json['parameters']['threshold'] = thresh
     av_json['needs'] = f'event_network_{tag}thresh_{thresh}'
     av_json['type'] = 'avalanches'
-    
+
     # Load nodes
     try :
         dmeta = subject_json[av_json['needs']]['act_map_nodes']
+        
         nodes = my.get_needed_derivative(dmeta, subject_json, project)
     except:
         print('nodes does not exist, i = ' + str(i))

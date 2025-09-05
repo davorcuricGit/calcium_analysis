@@ -122,12 +122,17 @@ for i, subject_file in enumerate(subject_jsons):
     # Load nodes
     try :
         #get the event based network
+        print(need_step)
+        print(subject_json.keys())
         en_name = subject_json[need_step]['thresh=' + str(thresh)]['left_right_avgd']
 
         #get the functional connectome
         fc_name = subject_json['len_control_FC']['gml']
-    except:
+    except Exception as e:
+        
+        print(f"An error occurred: {e}")
         print('need_step likely does not exist, i = ' + str(i))
+        stop
         continue
         
     # Extract label
@@ -146,7 +151,7 @@ for i, subject_file in enumerate(subject_jsons):
 
 df = pd.DataFrame(graphs).T
 
-
+print(df.head())
 
 #######################################################
 #######################################################main analysis

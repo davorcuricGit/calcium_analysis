@@ -1,11 +1,17 @@
 #ignore python checkpoint files
 **/*.ipynb_checkpoints/**
 
+#ignore ipynb workbooks, python codes uploaded to git should only be in .py
+**/*.ipynb
+
+
 #ignore bytecode files
 **/*.pyc
+python/__pycache__/*
 
 #ignore matlab asv files
 *.asv
 
 #misc
 *.xlsx#
+python/init_analysis.py

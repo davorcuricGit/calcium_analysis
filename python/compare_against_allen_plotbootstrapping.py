@@ -31,8 +31,8 @@ for i, subject_file in enumerate(subject_jsons):
 
 #ref = project['reference_condition']
 if computer == 'neumann':
-    condition_list = [['Baseline', 'PostShock', 'Post1Hr', 'Post24Hr']]
-    #condition_list.append(list(set(conditions)))
+    #condition_list = [['Baseline', 'PostShock', 'Post1Hr', 'Post24Hr']]
+    condition_list.append(list(set(conditions)))
     #print(condition_list)
     condition_list = my.flatten_list(condition_list)
     #condition_list = list(set(conditions))

@@ -23,7 +23,7 @@ import functions as my
 importlib.reload(my)
 
 calcium_dir = Path.home() / 'Documents' / 'calciumAnalysis'
-info = my.init_analysis(calcium_dir, projectidx = 0)
+info = my.init_analysis(calcium_dir, projectidx = 1)
 computer = info['computer']
 project = info['project']
 subject_jsons = info['subject_jsons']
@@ -31,7 +31,7 @@ av_json = info['av_json']
 reference = info['reference']
 
 thresh = 1
-tag = 'radius_8'#'shortavsL2'
+tag = 'radius_1'#'shortavsL2'
 map_type = 'act_map'
 
 result_dir = calcium_dir / 'event_based_networks' / 'python' / 'results' / computer
