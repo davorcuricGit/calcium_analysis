@@ -5,7 +5,11 @@ ME = [];
 
 %check that avalanches exist
 threshold = params.parameters.threshold;
-params.needs = [params.needs num2str(threshold)];
+radius = params.parameters.hkradius;
+params.needs = ['conditional_branch_map_radius_' num2str(radius) '_thresh_' num2str(threshold)];%[params.needs num2str(threshold)];
+
+subject_json
+params.needs
 
 if ~isfield(subject_json, params.needs)
     ME = 'prereq not yet calculated!';

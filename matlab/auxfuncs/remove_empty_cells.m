@@ -1,6 +1,7 @@
 
-function x = removeEmptyCells(x)
+function [x,non_empty_idx] = remove_empty_cells(x)
 
-    x = x(~cellfun('isempty',x));
+    non_empty_idx = find(cellfun('isempty',x) == 0);
+    x = x(non_empty_idx);
     
 end
