@@ -3,6 +3,7 @@
 
 function [derivative, ME] = get_needed_derivative(dmeta, subject_json, project)
 ME = [];
+derivative = [];
 try 
 derivative_name = dmeta.name;
 derivative_extension = dmeta.derivative_extension;
