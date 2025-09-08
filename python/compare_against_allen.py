@@ -122,7 +122,7 @@ for i, subject_file in enumerate(subject_jsons):
     # Load nodes
     try :
         #get the event based network
-        en_name = subject_json[need_step][tag + 'thresh=' + str(thresh)]['left_right_avgd']
+        en_name = subject_json[need_step][tag + 'thresh_' + str(thresh)]['left_right_avgd']
 
         #get the functional connectome
         try:
@@ -133,7 +133,8 @@ for i, subject_file in enumerate(subject_jsons):
             
             
     except Exception as e:
-        print(e)
+        print(f"Error: {e}")
+        #print(str(i) + ' : ' + e)
         #print('need_step likely does not exist, i = ' + str(i))
         continue
         
@@ -201,6 +202,13 @@ for i,cond in enumerate(condition_list):
     cortex.sort()
     
     adj_mat = get_structure_adj(f_name, cortex)
+    
+    allen_adj_df = pd.DataFrame(adj_mat, index=cortex, columns=cortex)
+
+    # Save as CSV
+    allen_adj_df.to_csv( f_loc + '/codes/auxfiles/' + "allen_structure_matrix.csv")
+    
+    
     
     
     #################################get adjacency for event based and fc networks
