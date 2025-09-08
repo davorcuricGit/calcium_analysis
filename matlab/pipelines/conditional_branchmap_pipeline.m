@@ -10,8 +10,11 @@ threshold = params.parameters.threshold;
 %params.needs = [params.needs num2str(threshold)];
 
 %this should probably be replaced with the tag
-
-params.needs = ['avs_thresh_' num2str(threshold) '_hkradius_' num2str(params.parameters.hkradius)];
+if isfield(params.parameters.framedownsample)
+    params.needs = ['avs_thresh_' num2str(threshold) '_hkradius_' num2str(params.parameters.hkradius) '_framedownsample_' num2str(params.parameters.framedownsample) ];
+else
+    params.needs = ['avs_thresh_' num2str(threshold) '_hkradius_' num2str(params.parameters.hkradius)];
+end
 
 
 params.needs = strrep(params.needs, '.', 'p');
