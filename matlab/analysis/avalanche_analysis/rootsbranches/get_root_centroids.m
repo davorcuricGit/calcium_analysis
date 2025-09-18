@@ -4,6 +4,7 @@
 function avstats = get_root_centroids(avstats,validPixels, sz);
 
 clear c
+
 %get the centroid of each root
 for i = 1:length(avstats);
 

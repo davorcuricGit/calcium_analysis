@@ -1,13 +1,25 @@
 clear all
+%%
+
+% Specify the main folder you want to add
+mainFolder = '/home/dcuric/Documents/calciumAnalysis/codes/matlab'; % Replace with your desired folder path
+
+% Generate a string containing the paths of the main folder and all its subfolders
+pathString = genpath(mainFolder);
+
+% Add these paths to the MATLAB search path
+addpath(pathString);
+
 %% get the files
 
-lines = readlines("dirs_to_filter.txt");
+lines = readlines("/home/dcuric/Documents/calciumAnalysis/codes/matlab/processing/filtering/dirs_to_filter.txt");
 
 folders = [];
 for n = 1:length(lines)
     d = dir(fullfile(lines{n},'**','*fChan.dat'));
     folders = [folders {d.folder}]
 end
+
 %
 band = [0.1 15];
 %

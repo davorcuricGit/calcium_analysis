@@ -117,11 +117,24 @@ for i, subject_file in enumerate(subject_jsons):
     with open(subject_file, 'r') as f:
         subject_json = json.load(f)
 
+    if subject_json['init']['outlier'] == 1:
+        continue
+    
     path_name = subject_json['init']['project_root'] + subject_json['init']['derivative_path']
 
+    print()
+    print(subject_json[need_step].keys())
+    print(need_step)
+    stop
+    
     # Load nodes
     try :
         #get the event based network
+        # print('')
+        # print(need_step)
+        # print(subject_json[need_step])
+        # print(tag + 'thresh_' + str(thresh))
+        
         en_name = subject_json[need_step][tag + 'thresh_' + str(thresh)]['left_right_avgd']
 
         #get the functional connectome
@@ -134,6 +147,7 @@ for i, subject_file in enumerate(subject_jsons):
             
     except Exception as e:
         print(f"Error: {e}")
+        print('likely the field after need_step is wrong or your tag is wrong')
         #print(str(i) + ' : ' + e)
         #print('need_step likely does not exist, i = ' + str(i))
         continue

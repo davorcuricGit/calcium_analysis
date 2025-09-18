@@ -1,0 +1,2619 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2024 The MathWorks, Inc.
+                  R2024b (24.2.0.2712019) 64-bit (glnxa64)
+                              August 22, 2024
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+folders =
+
+  1x128 cell array
+
+  Columns 1 through 3
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 4 through 6
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 7 through 9
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 10 through 12
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 13 through 15
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 16 through 18
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 19 through 21
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 22 through 24
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 25 through 27
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 28 through 30
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 31 through 33
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 34 through 36
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 37 through 39
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 40 through 42
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 43 through 45
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 46 through 48
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 49 through 51
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 52 through 54
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 55 through 57
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 58 through 60
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 61 through 63
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 64 through 66
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 67 through 69
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 70 through 72
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 73 through 75
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 76 through 78
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 79 through 81
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 82 through 84
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 85 through 87
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 88 through 90
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 91 through 93
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 94 through 96
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 97 through 99
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 100 through 102
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 103 through 105
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 106 through 108
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 109 through 111
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 112 through 114
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 115 through 117
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 118 through 120
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 121 through 123
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 124 through 126
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+  Columns 127 through 128
+
+    {'/scratch/proje...'}    {'/scratch/proje...'}
+
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/12F_DOBApril7th_10weeks'
+
+default chosen..
+Read file finised in 6s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/12F_DOBApril7th_10weeks/fChan.dat
+Finshed Filt program in 47s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/12F_DOBApril7th_10weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22474.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/12F_DOBApril7th_10weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22474.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/15F_DOBApril7th_10weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/15F_DOBApril7th_10weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/15F_DOBApril7th_10weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22494.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/15F_DOBApril7th_10weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22494.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/1F_DOBMarch25th_10weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/1F_DOBMarch25th_10weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/1F_DOBMarch25th_10weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22480.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/1F_DOBMarch25th_10weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22480.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/21M_DOBApril7th_10weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/21M_DOBApril7th_10weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/21M_DOBApril7th_10weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22476.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/21M_DOBApril7th_10weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22476.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/2F_DOBMarch25th_10weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/2F_DOBMarch25th_10weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/2F_DOBMarch25th_10weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22477.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/2F_DOBMarch25th_10weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22477.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/3F_DOBMarch25th_10weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/3F_DOBMarch25th_10weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/3F_DOBMarch25th_10weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22487.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/3F_DOBMarch25th_10weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22487.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/4F_DOBMarch25th_10weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/4F_DOBMarch25th_10weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/4F_DOBMarch25th_10weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22479.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/4F_DOBMarch25th_10weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22479.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/6M_DOBMarch25th_10weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/6M_DOBMarch25th_10weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/6M_DOBMarch25th_10weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22479.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/6M_DOBMarch25th_10weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22479.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/7M_DOBMarch25th_10weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/7M_DOBMarch25th_10weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/7M_DOBMarch25th_10weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22485.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/7M_DOBMarch25th_10weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22485.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/8M_DOBMarch26th_10weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/8M_DOBMarch26th_10weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/8M_DOBMarch26th_10weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22474.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/8M_DOBMarch26th_10weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22474.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/9M_DOBMarch26th_10weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/9M_DOBMarch26th_10weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/9M_DOBMarch26th_10weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22478.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/10 weeks/9M_DOBMarch26th_10weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22478.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/11M_DOBMarch26th_11weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/11M_DOBMarch26th_11weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/11M_DOBMarch26th_11weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22480.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/11M_DOBMarch26th_11weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22480.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/12F_DOBApril7th_11weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/12F_DOBApril7th_11weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/12F_DOBApril7th_11weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22481.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/12F_DOBApril7th_11weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22481.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/15F_DOBApril7th_11weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/15F_DOBApril7th_11weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/15F_DOBApril7th_11weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22483.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/15F_DOBApril7th_11weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22483.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/1F_DOBMarch25th_11weeks'
+
+default chosen..
+Read file finised in 9s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/1F_DOBMarch25th_11weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/1F_DOBMarch25th_11weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22487.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/1F_DOBMarch25th_11weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22487.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/21M_DOBApril7th_11weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/21M_DOBApril7th_11weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/21M_DOBApril7th_11weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22479.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/21M_DOBApril7th_11weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22479.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/2F_DOBMarch25th_11weeks'
+
+default chosen..
+Read file finised in 9s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/2F_DOBMarch25th_11weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/2F_DOBMarch25th_11weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22483.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/2F_DOBMarch25th_11weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22483.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/3F_DOBMarch25th_11weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/3F_DOBMarch25th_11weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/3F_DOBMarch25th_11weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22478.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/3F_DOBMarch25th_11weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22478.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/4F_DOBMarch25th_11weeks'
+
+default chosen..
+Read file finised in 10s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/4F_DOBMarch25th_11weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/4F_DOBMarch25th_11weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22488.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/4F_DOBMarch25th_11weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22488.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/6M_DOBMarch25th_11weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/6M_DOBMarch25th_11weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/6M_DOBMarch25th_11weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22488.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/6M_DOBMarch25th_11weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22488.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/7M_DOBMarch25th_11weeks'
+
+default chosen..
+Read file finised in 9s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/7M_DOBMarch25th_11weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/7M_DOBMarch25th_11weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22485.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/7M_DOBMarch25th_11weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22485.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/8M_DOBMarch26th_11weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/8M_DOBMarch26th_11weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/8M_DOBMarch26th_11weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22474.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/8M_DOBMarch26th_11weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22474.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/9M_DOBMarch26th_11weeks'
+
+default chosen..
+Read file finised in 9s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/9M_DOBMarch26th_11weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/9M_DOBMarch26th_11weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22485.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/11 weeks/9M_DOBMarch26th_11weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22485.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/11M_DOBMarch26th_12weeks'
+
+default chosen..
+Read file finised in 11s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/11M_DOBMarch26th_12weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/11M_DOBMarch26th_12weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22478.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/11M_DOBMarch26th_12weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22478.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/12F_DOBApril7th_12weeks'
+
+default chosen..
+Read file finised in 12s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/12F_DOBApril7th_12weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/12F_DOBApril7th_12weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22489.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/12F_DOBApril7th_12weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22489.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/15F_DOBApril7th_12weeks'
+
+default chosen..
+Read file finised in 10s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/15F_DOBApril7th_12weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/15F_DOBApril7th_12weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22485.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/15F_DOBApril7th_12weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22485.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/1F_DOBMarch25th_12weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/1F_DOBMarch25th_12weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/1F_DOBMarch25th_12weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22477.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/1F_DOBMarch25th_12weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22477.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/21M_DOBApril7th_12weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/21M_DOBApril7th_12weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/21M_DOBApril7th_12weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22486.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/21M_DOBApril7th_12weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22486.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/2F_DOBMarch25th_12weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/2F_DOBMarch25th_12weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/2F_DOBMarch25th_12weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22478.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/2F_DOBMarch25th_12weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22478.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/3F_DOBMarch25th_12weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/3F_DOBMarch25th_12weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/3F_DOBMarch25th_12weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22476.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/3F_DOBMarch25th_12weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22476.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/4F_DOBMarch25th_12weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/4F_DOBMarch25th_12weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/4F_DOBMarch25th_12weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22483.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/4F_DOBMarch25th_12weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22483.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/6M_DOBMarch25th_12weeks'
+
+default chosen..
+Read file finised in 9s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/6M_DOBMarch25th_12weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/6M_DOBMarch25th_12weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22483.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/6M_DOBMarch25th_12weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22483.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/7M_DOBMarch25th_12weeks'
+
+default chosen..
+Read file finised in 10s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/7M_DOBMarch25th_12weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/7M_DOBMarch25th_12weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22483.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/7M_DOBMarch25th_12weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22483.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/8M_DOBMarch26th_12weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/8M_DOBMarch26th_12weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/8M_DOBMarch26th_12weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22475.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/8M_DOBMarch26th_12weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22475.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/9M_DOBMarch26th_12weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/9M_DOBMarch26th_12weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/9M_DOBMarch26th_12weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22488.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/12 weeks/9M_DOBMarch26th_12weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22488.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/11M_DOBMarch26th_13weeks'
+
+default chosen..
+Read file finised in 9s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/11M_DOBMarch26th_13weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/11M_DOBMarch26th_13weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22505.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/11M_DOBMarch26th_13weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22505.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/12F_DOBApril7th_13weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/12F_DOBApril7th_13weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/12F_DOBApril7th_13weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22501.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/12F_DOBApril7th_13weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22501.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/15F_DOBApril7th_13weeks'
+
+default chosen..
+Read file finised in 9s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/15F_DOBApril7th_13weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/15F_DOBApril7th_13weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22507.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/15F_DOBApril7th_13weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22507.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/1F_DOBMarch25th_13weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/1F_DOBMarch25th_13weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/1F_DOBMarch25th_13weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22506.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/1F_DOBMarch25th_13weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22506.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/21M_DOBApril7th_13weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/21M_DOBApril7th_13weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/21M_DOBApril7th_13weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22497.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/21M_DOBApril7th_13weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22497.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/2F_DOBMarch25th_13weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/2F_DOBMarch25th_13weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/2F_DOBMarch25th_13weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22502.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/2F_DOBMarch25th_13weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22502.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/3F_DOBMarch25th_13weeks'
+
+default chosen..
+Read file finised in 9s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/3F_DOBMarch25th_13weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/3F_DOBMarch25th_13weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22509.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/3F_DOBMarch25th_13weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22509.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/4F_DOBMarch25th_13weeks'
+
+default chosen..
+Read file finised in 15s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/4F_DOBMarch25th_13weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/4F_DOBMarch25th_13weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22501.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/4F_DOBMarch25th_13weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22501.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/6M_DOBMarch25th_13weeks'
+
+default chosen..
+Read file finised in 13s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/6M_DOBMarch25th_13weeks/fChan.dat
+Finshed Filt program in 47s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/6M_DOBMarch25th_13weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22502.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/6M_DOBMarch25th_13weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22502.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/7M_DOBMarch25th_13weeks'
+
+default chosen..
+Read file finised in 9s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/7M_DOBMarch25th_13weeks/fChan.dat
+Finshed Filt program in 47s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/7M_DOBMarch25th_13weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22505.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/7M_DOBMarch25th_13weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22505.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/8M_DOBMarch26th_13weeks'
+
+default chosen..
+Read file finised in 9s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/8M_DOBMarch26th_13weeks/fChan.dat
+Finshed Filt program in 47s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/8M_DOBMarch26th_13weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22500.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/8M_DOBMarch26th_13weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22500.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/9M_DOBMarch26th_13weeks'
+
+default chosen..
+Read file finised in 12s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/9M_DOBMarch26th_13weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/9M_DOBMarch26th_13weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22500.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/13 weeks/9M_DOBMarch26th_13weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22500.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/10M_DOBMarch26th_14weeks'
+
+default chosen..
+Read file finised in 9s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/10M_DOBMarch26th_14weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/10M_DOBMarch26th_14weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22504.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/10M_DOBMarch26th_14weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22504.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/12F_DOBApril7th_14weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/12F_DOBApril7th_14weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/12F_DOBApril7th_14weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22500.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/12F_DOBApril7th_14weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22500.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/15F_DOBApril7th_14weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/15F_DOBApril7th_14weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/15F_DOBApril7th_14weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22500.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/15F_DOBApril7th_14weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22500.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/1F_DOBMarch25th_14weeks'
+
+default chosen..
+Read file finised in 13s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/1F_DOBMarch25th_14weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/1F_DOBMarch25th_14weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22511.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/1F_DOBMarch25th_14weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22511.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/21M_DOBApril7th_14weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/21M_DOBApril7th_14weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/21M_DOBApril7th_14weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22506.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/21M_DOBApril7th_14weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22506.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/2F_DOBMarch25th_14weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/2F_DOBMarch25th_14weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/2F_DOBMarch25th_14weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22509.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/2F_DOBMarch25th_14weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22509.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/3F_DOBMarch25th_14weeks'
+
+default chosen..
+Read file finised in 9s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/3F_DOBMarch25th_14weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/3F_DOBMarch25th_14weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22507.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/3F_DOBMarch25th_14weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22507.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/4F_DOBMarch25th_14weeks'
+
+default chosen..
+Read file finised in 11s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/4F_DOBMarch25th_14weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/4F_DOBMarch25th_14weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22507.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/4F_DOBMarch25th_14weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22507.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/6M_DOBMarch25th_14weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/6M_DOBMarch25th_14weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/6M_DOBMarch25th_14weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22497.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/6M_DOBMarch25th_14weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22497.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/7M_DOBMarch25th_14weeks'
+
+default chosen..
+Read file finised in 11s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/7M_DOBMarch25th_14weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/7M_DOBMarch25th_14weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22496.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/7M_DOBMarch25th_14weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22496.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/8M_DOBMarch26th_14weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/8M_DOBMarch26th_14weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/8M_DOBMarch26th_14weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22513.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/8M_DOBMarch26th_14weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22513.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/9M_DOBMarch26th_14weeks'
+
+default chosen..
+Read file finised in 14s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/9M_DOBMarch26th_14weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/9M_DOBMarch26th_14weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22499.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/14 weeks/9M_DOBMarch26th_14weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22499.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/11M_DOBMarch26th_15weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/11M_DOBMarch26th_15weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/11M_DOBMarch26th_15weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22501.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/11M_DOBMarch26th_15weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22501.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/12F_DOBApril7th_15weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/12F_DOBApril7th_15weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/12F_DOBApril7th_15weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22503.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/12F_DOBApril7th_15weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22503.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/15F_DOBApril7th_15weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/15F_DOBApril7th_15weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/15F_DOBApril7th_15weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22498.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/15F_DOBApril7th_15weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22498.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/1F_DOBMarch25th_15weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/1F_DOBMarch25th_15weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/1F_DOBMarch25th_15weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22498.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/1F_DOBMarch25th_15weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22498.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/21M_DOBApril7th_15weeks'
+
+default chosen..
+Read file finised in 9s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/21M_DOBApril7th_15weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/21M_DOBApril7th_15weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22508.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/21M_DOBApril7th_15weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22508.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/2F_DOBMarch25th_15weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/2F_DOBMarch25th_15weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/2F_DOBMarch25th_15weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22493.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/2F_DOBMarch25th_15weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22493.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/3F_DOBMarch25th_15weeks'
+
+default chosen..
+Read file finised in 6s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/3F_DOBMarch25th_15weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/3F_DOBMarch25th_15weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22510.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/3F_DOBMarch25th_15weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22510.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/4F_DOBMarch25th_15weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/4F_DOBMarch25th_15weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/4F_DOBMarch25th_15weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22500.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/4F_DOBMarch25th_15weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22500.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/6M_DOBMarch25th_15weeks'
+
+default chosen..
+Read file finised in 11s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/6M_DOBMarch25th_15weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/6M_DOBMarch25th_15weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22506.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/6M_DOBMarch25th_15weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22506.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/7M_DOBMarch25th_15weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/7M_DOBMarch25th_15weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/7M_DOBMarch25th_15weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22503.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/7M_DOBMarch25th_15weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22503.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/8M_DOBMarch26th_15weeks'
+
+default chosen..
+Read file finised in 12s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/8M_DOBMarch26th_15weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/8M_DOBMarch26th_15weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22504.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/8M_DOBMarch26th_15weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22504.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/9M_DOBMarch26th_15weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/9M_DOBMarch26th_15weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/9M_DOBMarch26th_15weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22495.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/15 weeks/9M_DOBMarch26th_15weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22495.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/11M_DOBMarch26th_16weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/11M_DOBMarch26th_16weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/11M_DOBMarch26th_16weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22494.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/11M_DOBMarch26th_16weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22494.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/12F_DOBApril7th_16weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/12F_DOBApril7th_16weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/12F_DOBApril7th_16weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22492.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/12F_DOBApril7th_16weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22492.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/15F_DOBApril7th_16weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/15F_DOBApril7th_16weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/15F_DOBApril7th_16weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22503.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/15F_DOBApril7th_16weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22503.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/1F_DOBMarch25th_16weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/1F_DOBMarch25th_16weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/1F_DOBMarch25th_16weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22492.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/1F_DOBMarch25th_16weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22492.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/21M_DOBApril7th_16weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/21M_DOBApril7th_16weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/21M_DOBApril7th_16weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22504.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/21M_DOBApril7th_16weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22504.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/2F_DOBMarch25th_16weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/2F_DOBMarch25th_16weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/2F_DOBMarch25th_16weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22498.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/2F_DOBMarch25th_16weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22498.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/3F_DOBMarch25th_16weeks'
+
+default chosen..
+Read file finised in 9s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/3F_DOBMarch25th_16weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/3F_DOBMarch25th_16weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22497.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/3F_DOBMarch25th_16weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22497.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/4F_DOBMarch25th_16weeks'
+
+default chosen..
+Read file finised in 9s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/4F_DOBMarch25th_16weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/4F_DOBMarch25th_16weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22499.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/4F_DOBMarch25th_16weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22499.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/6M_DOBMarch25th_16weeks'
+
+default chosen..
+Read file finised in 11s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/6M_DOBMarch25th_16weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/6M_DOBMarch25th_16weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22503.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/6M_DOBMarch25th_16weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22503.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/7M_DOBMarch25th_16weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/7M_DOBMarch25th_16weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/7M_DOBMarch25th_16weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22504.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/7M_DOBMarch25th_16weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22504.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/8M_DOBMarch26th_16weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/8M_DOBMarch26th_16weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/8M_DOBMarch26th_16weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22499.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/8M_DOBMarch26th_16weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22499.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/9M_DOBMarch26th_16weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/9M_DOBMarch26th_16weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/9M_DOBMarch26th_16weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22504.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/16 weeks/9M_DOBMarch26th_16weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22504.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/11M_DOBMarch26th_17weeks'
+
+default chosen..
+Read file finised in 11s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/11M_DOBMarch26th_17weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/11M_DOBMarch26th_17weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22492.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/11M_DOBMarch26th_17weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22492.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/12F_DOBApril7th_17weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/12F_DOBApril7th_17weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/12F_DOBApril7th_17weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22502.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/12F_DOBApril7th_17weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22502.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/15F_DOBApril7th_17weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/15F_DOBApril7th_17weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/15F_DOBApril7th_17weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22505.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/15F_DOBApril7th_17weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22505.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/1F_DOBMarch25th_17weeks'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/1F_DOBMarch25th_17weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/1F_DOBMarch25th_17weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22506.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/1F_DOBMarch25th_17weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22506.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/21M_DOBApril7th_17weeks'
+
+default chosen..
+Read file finised in 10s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/21M_DOBApril7th_17weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/21M_DOBApril7th_17weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22495.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/21M_DOBApril7th_17weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22495.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/2F_DOBMarch25th_17weeks'
+
+default chosen..
+Read file finised in 12s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/2F_DOBMarch25th_17weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/2F_DOBMarch25th_17weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22500.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/2F_DOBMarch25th_17weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22500.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/3F_DOBMarch25th_17weeks'
+
+default chosen..
+Read file finised in 10s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/3F_DOBMarch25th_17weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/3F_DOBMarch25th_17weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22501.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/3F_DOBMarch25th_17weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22501.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/4F_DOBMarch25th_17weeks'
+
+default chosen..
+Read file finised in 12s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/4F_DOBMarch25th_17weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/4F_DOBMarch25th_17weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22504.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/4F_DOBMarch25th_17weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22504.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/6M_DOBMarch25th_17weeks'
+
+default chosen..
+Read file finised in 19s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/6M_DOBMarch25th_17weeks/fChan.dat
+Finshed Filt program in 47s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/6M_DOBMarch25th_17weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22494.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/6M_DOBMarch25th_17weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22494.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/7M_DOBMarch25th_17weeks'
+
+default chosen..
+Read file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/7M_DOBMarch25th_17weeks/fChan.dat
+Finshed Filt program in 47s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/7M_DOBMarch25th_17weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22494.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/7M_DOBMarch25th_17weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22494.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/8M_DOBMarch26th_17weeks'
+
+default chosen..
+Read file finised in 23s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/8M_DOBMarch26th_17weeks/fChan.dat
+Finshed Filt program in 47s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/8M_DOBMarch26th_17weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22497.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/8M_DOBMarch26th_17weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22497.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/9M_DOBMarch26th_17weeks'
+
+default chosen..
+Read file finised in 21s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/9M_DOBMarch26th_17weeks/fChan.dat
+Finshed Filt program in 47s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/9M_DOBMarch26th_17weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22504.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/17 weeks/9M_DOBMarch26th_17weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22504.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/11M_DOBMarch25th_19weeks_DA'
+
+default chosen..
+Read file finised in 14s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/11M_DOBMarch25th_19weeks_DA/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/11M_DOBMarch25th_19weeks_DA/Spontaneous_50Hz_filt01-15_float32_256-256-22511.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/11M_DOBMarch25th_19weeks_DA/Spontaneous_50Hz_filt01-15_float32_256-256-22511.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/12F_DOBApril7th_19weeks_DA'
+
+default chosen..
+Read file finised in 11s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/12F_DOBApril7th_19weeks_DA/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/12F_DOBApril7th_19weeks_DA/Spontaneous_50Hz_filt01-15_float32_256-256-22498.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/12F_DOBApril7th_19weeks_DA/Spontaneous_50Hz_filt01-15_float32_256-256-22498.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/15F_DOBApril7th_19weeks_DA'
+
+default chosen..
+Read file finised in 9s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/15F_DOBApril7th_19weeks_DA/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/15F_DOBApril7th_19weeks_DA/Spontaneous_50Hz_filt01-15_float32_256-256-22504.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/15F_DOBApril7th_19weeks_DA/Spontaneous_50Hz_filt01-15_float32_256-256-22504.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/1F_DOBMarch25th_19weeks_KNM'
+
+default chosen..
+Read file finised in 9s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/1F_DOBMarch25th_19weeks_KNM/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/1F_DOBMarch25th_19weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22502.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/1F_DOBMarch25th_19weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22502.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/21M_DOBApril7th_19weeks_DA'
+
+default chosen..
+Read file finised in 18s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/21M_DOBApril7th_19weeks_DA/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/21M_DOBApril7th_19weeks_DA/Spontaneous_50Hz_filt01-15_float32_256-256-22507.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/21M_DOBApril7th_19weeks_DA/Spontaneous_50Hz_filt01-15_float32_256-256-22507.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/2F_DOBMarch25th_19weeks_KNM'
+
+default chosen..
+Read file finised in 9s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/2F_DOBMarch25th_19weeks_KNM/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/2F_DOBMarch25th_19weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22506.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/2F_DOBMarch25th_19weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22506.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/3F_DOBMarch25th_19weeks_KNM'
+
+default chosen..
+Read file finised in 12s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/3F_DOBMarch25th_19weeks_KNM/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/3F_DOBMarch25th_19weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22501.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/3F_DOBMarch25th_19weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22501.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/4F_DOBMarch25th_19weeks_KNM'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/4F_DOBMarch25th_19weeks_KNM/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/4F_DOBMarch25th_19weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22501.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/4F_DOBMarch25th_19weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22501.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/6M_DOBMarch25th_19weeks_KNM'
+
+default chosen..
+Read file finised in 12s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/6M_DOBMarch25th_19weeks_KNM/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/6M_DOBMarch25th_19weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22498.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/6M_DOBMarch25th_19weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22498.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/7M_DOBMarch25th_19weeks_KNM'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/7M_DOBMarch25th_19weeks_KNM/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/7M_DOBMarch25th_19weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22507.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/7M_DOBMarch25th_19weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22507.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/8M_DOBMarch25th_19weeks_DA'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/8M_DOBMarch25th_19weeks_DA/fChan.dat
+Finshed Filt program in 47s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/8M_DOBMarch25th_19weeks_DA/Spontaneous_50Hz_filt01-15_float32_256-256-22499.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/19 weeks/8M_DOBMarch25th_19weeks_DA/Spontaneous_50Hz_filt01-15_float32_256-256-22499.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/11M_DOBMarch26th_23weeks_KNM'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/11M_DOBMarch26th_23weeks_KNM/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/11M_DOBMarch26th_23weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22492.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/11M_DOBMarch26th_23weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22492.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/12F_DOBApril7th_23weeks_KNM'
+
+default chosen..
+Read file finised in 8s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/12F_DOBApril7th_23weeks_KNM/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/12F_DOBApril7th_23weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22504.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/12F_DOBApril7th_23weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22504.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/15F_DOBApril7th_23weeks_KNM'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/15F_DOBApril7th_23weeks_KNM/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/15F_DOBApril7th_23weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22486.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/15F_DOBApril7th_23weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22486.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/1F_DOBMarch25th_23weeks_KNM'
+
+default chosen..
+Read file finised in 11s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/1F_DOBMarch25th_23weeks_KNM/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/1F_DOBMarch25th_23weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22493.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/1F_DOBMarch25th_23weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22493.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/21M_DOBApril7th_23weeks_KNM'
+
+default chosen..
+Read file finised in 18s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/21M_DOBApril7th_23weeks_KNM/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/21M_DOBApril7th_23weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22495.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/21M_DOBApril7th_23weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22495.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/2F_DOBMarch25th_23weeks_KNM'
+
+default chosen..
+Read file finised in 9s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/2F_DOBMarch25th_23weeks_KNM/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/2F_DOBMarch25th_23weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22494.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/2F_DOBMarch25th_23weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22494.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/3F_DOBMarch25th_23weeks_KNM'
+
+default chosen..
+Read file finised in 11s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/3F_DOBMarch25th_23weeks_KNM/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/3F_DOBMarch25th_23weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22495.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/3F_DOBMarch25th_23weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22495.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/4F_DOBMarch25th_23weeks_KNM'
+
+default chosen..
+Read file finised in 10s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/4F_DOBMarch25th_23weeks_KNM/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/4F_DOBMarch25th_23weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22514.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/4F_DOBMarch25th_23weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22514.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/6M_DOBMarch25th_23weeks_KNM'
+
+default chosen..
+Read file finised in 9s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/6M_DOBMarch25th_23weeks_KNM/fChan.dat
+Finshed Filt program in 47s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/6M_DOBMarch25th_23weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22500.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/6M_DOBMarch25th_23weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22500.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/7M_DOBMarch25th_23weeks_KNM'
+
+default chosen..
+Read file finised in 14s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/7M_DOBMarch25th_23weeks_KNM/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/7M_DOBMarch25th_23weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22490.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/23 weeks/7M_DOBMarch25th_23weeks_KNM/Spontaneous_50Hz_filt01-15_float32_256-256-22490.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/11M_DOBMarch26th_9weeks'
+
+default chosen..
+Read file finised in 12s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/11M_DOBMarch26th_9weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/11M_DOBMarch26th_9weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22471.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/11M_DOBMarch26th_9weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22471.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/12F_DOBApril7th_9weeks'
+
+default chosen..
+Read file finised in 12s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/12F_DOBApril7th_9weeks/fChan.dat
+Finshed Filt program in 47s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/12F_DOBApril7th_9weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22489.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/12F_DOBApril7th_9weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22489.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/15F_DOBApril7th_9weeks'
+
+default chosen..
+Read file finised in 9s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/15F_DOBApril7th_9weeks/fChan.dat
+Finshed Filt program in 47s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/15F_DOBApril7th_9weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22481.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/15F_DOBApril7th_9weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22481.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/1F_DOBMarch25th_9weeks'
+
+default chosen..
+Read file finised in 11s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/1F_DOBMarch25th_9weeks/fChan.dat
+Finshed Filt program in 47s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/1F_DOBMarch25th_9weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22478.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/1F_DOBMarch25th_9weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22478.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/21M_DOBApril7th_9weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/21M_DOBApril7th_9weeks/fChan.dat
+Finshed Filt program in 47s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/21M_DOBApril7th_9weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22471.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/21M_DOBApril7th_9weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22471.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/2F_DOBMarch25th_9weeks'
+
+default chosen..
+Read file finised in 9s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/2F_DOBMarch25th_9weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/2F_DOBMarch25th_9weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22473.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 19s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/2F_DOBMarch25th_9weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22473.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/3F_DOBMarch25th_9weeks'
+
+default chosen..
+Read file finised in 9s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/3F_DOBMarch25th_9weeks/fChan.dat
+Finshed Filt program in 47s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/3F_DOBMarch25th_9weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22470.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/3F_DOBMarch25th_9weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22470.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/4F_DOBMarch25th_9weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/4F_DOBMarch25th_9weeks/fChan.dat
+Finshed Filt program in 47s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/4F_DOBMarch25th_9weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22470.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/4F_DOBMarch25th_9weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22470.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/6M_DOBMarch25th_9weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/6M_DOBMarch25th_9weeks/fChan.dat
+Finshed Filt program in 47s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/6M_DOBMarch25th_9weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22468.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 16s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/6M_DOBMarch25th_9weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22468.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/7M_DOBMarch25th_9weeks'
+
+default chosen..
+Read file finised in 11s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/7M_DOBMarch25th_9weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/7M_DOBMarch25th_9weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22468.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/7M_DOBMarch25th_9weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22468.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/8M_DOBMarch26th_9weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/8M_DOBMarch26th_9weeks/fChan.dat
+Finshed Filt program in 47s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/8M_DOBMarch26th_9weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22470.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/8M_DOBMarch26th_9weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22470.raw
+
+filedir =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/9M_DOBMarch26th_9weeks'
+
+default chosen..
+Read file finised in 7s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/9M_DOBMarch26th_9weeks/fChan.dat
+Finshed Filt program in 46s
+
+filename =
+
+    '/scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/9M_DOBMarch26th_9weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22470.raw'
+
+
+fid =
+
+     3
+
+Write file finised in 17s: /scratch/projects/5xFAD_jRGeco1a/raw_data/NewCrossJune2024_cohort1/9 weeks/9M_DOBMarch26th_9weeks/Spontaneous_50Hz_filt01-15_float32_256-256-22470.raw
