@@ -8,7 +8,14 @@ ME = [];
 %check that avalanches exist
 threshold = params.parameters.threshold;
 %params.needs = [params.needs num2str(threshold)];
-params.needs = ['avs_thresh_' num2str(threshold) '_hkradius_' num2str(params.parameters.hkradius)];
+
+%this should probably be replaced with the tag
+if isfield(params.parameters, 'framedownsample')
+    params.needs = ['avs_thresh_' num2str(threshold) '_hkradius_' num2str(params.parameters.hkradius) '_framedownsample_' num2str(params.parameters.framedownsample) ];
+else
+    params.needs = ['avs_thresh_' num2str(threshold) '_hkradius_' num2str(params.parameters.hkradius)];
+end
+
 
 params.needs = strrep(params.needs, '.', 'p');
 
@@ -31,21 +38,23 @@ else
         progress.total = length(subject_json);
 
         if params.run
-            params.needs
-            subject_json.(params.needs)
-            'here'
+
+            downsample = subject_json.(params.needs).downsample;
+
             step_params = struct(step = params.step, ...
                 type = params.type, ...
                 threshold = threshold, ...
                 hkradius = params.parameters.hkradius, ...
-                downsample = subject_json.(params.needs).downsample, ...
-                warp = subject_json.(params.needs).warp, ...
-                sz = [subject_json.init.height, subject_json.init.width]/subject_json.(params.needs).downsample, ...
+                downsample = downsample, ...%subject_json.(params.needs).downsample, ...
+                framedownsample = params.parameters.framedownsample, ...
+                warp = 1,...%subject_json.(params.needs).warp, ...
+                sz = [subject_json.init.height, subject_json.init.width]/downsample, ...
                 global_mask = project.ImgF_processing.mask_name, ...
                 derivative_extension = '.csv' ...
                 );
 
             %Loading avalanches
+            
             [avstats, ME] = load_derivative(subject_json,params.needs, project);
             step_params.numAvs = length(avstats);
 
@@ -54,13 +63,13 @@ else
 
             %get the per-subject subnetworks
             [subnetwork, subnetworksFOV] = get_allen_subnetworks(subject_json, params.dorsalMaps, ...
-                downsample = subject_json.(params.needs).downsample, ...
+                downsample = 2, ...
                 globalmask = project.ImgF_processing.mask_name);
 
             %get valid Pixels
             [mask, validPixels, ~] = load_standard_mask(project.ImgF_processing);
              [~,validPixels,~] = spatial_downsample_reshaped(validPixels, ...
-                subject_json.(params.needs).downsample, ...
+                downsample, ...
                 mask ...
                 );
 %             [~,validPixels,~] = spatial_downsample_reshaped(validPixels, ...
@@ -73,7 +82,7 @@ else
             flag = '';
             ME = [];
             conditionalmaps =[];
-
+            
             [term_map,act_map, num_activations] = get_conditional_branch_map(avstats,validPixels,subnetworksFOV,allen_subnets, step_params);
 
             'saving maps...'

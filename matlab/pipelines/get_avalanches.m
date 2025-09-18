@@ -28,8 +28,9 @@ end
 
 % load the mask this likely needs a better appraoch
 load(av_json.ImgF_processing.mask_name)
-mask = Mask_Davor;
-mask = spatialBlockDownsample(single(mask), av_json.ImgF_processing.down_sample, false);
+
+mask = single(Mask_Davor/max(max(Mask_Davor)));
+mask = single(spatialBlockDownsample(mask, av_json.ImgF_processing.down_sample, false));
 
 
 if ~isempty(ImgF)

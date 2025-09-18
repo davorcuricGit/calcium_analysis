@@ -1,6 +1,6 @@
-function alias = get_computer_alias(computersfile)
+function [alias,projectsDir] = get_computer_alias(computersfile)
     % Load computer aliases from CSV
-    data = readtable(computersfile);  % Assumes columns: RealName, AliasName
+    data = readtable(computersfile);  % Assumes columns: RealName, AliasName, projectsDir
 
     % Get this computer's actual name from environment variable
 
@@ -18,10 +18,12 @@ function alias = get_computer_alias(computersfile)
     
     if any(match)
         alias = data.AliasName(match);
-        alias = alias(1);  % in case of multiple matches
+        alias = char(alias(1));  % in case of multiple matches
+        projectsDir = char(data.projectsDir(match));
     else
         warning('Computer name "%s" not found in computers.csv.', realName);
-        alias = realName;  % fallback to real name
+        alias = char(realName);  % fallback to real name
+        projectsDir = [];
     end
     alias = char(alias);
 end
