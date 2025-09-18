@@ -12,6 +12,7 @@ params.needs = ['avs_thresh_' num2str(threshold) '_hkradius_' num2str(params.par
 
 params.needs = strrep(params.needs, '.', 'p');
 
+params.needs
 
 if ~isfield(subject_json, [params.needs])
     ME = 'avalanches not yet calculated!';
@@ -30,7 +31,9 @@ else
         progress.total = length(subject_json);
 
         if params.run
-
+            params.needs
+            subject_json.(params.needs)
+            'here'
             step_params = struct(step = params.step, ...
                 type = params.type, ...
                 threshold = threshold, ...

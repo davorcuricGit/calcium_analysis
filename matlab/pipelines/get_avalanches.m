@@ -1,5 +1,5 @@
 
-function [all_clusters,flag, ME] = get_avalanches(ImgF, subject_json, av_json, project)
+function [all_clusters,flag,subject_json, ME] = get_avalanches(ImgF, subject_json, av_json, project)
 
 all_clusters = [];
 ME = [];%error handeling
@@ -29,7 +29,7 @@ end
 % load the mask this likely needs a better appraoch
 load(av_json.ImgF_processing.mask_name)
 mask = Mask_Davor;
-mask = spatialBlockDownsample(mask, av_json.ImgF_processing.down_sample, false);
+mask = spatialBlockDownsample(single(mask), av_json.ImgF_processing.down_sample, false);
 
 
 if ~isempty(ImgF)
@@ -60,7 +60,7 @@ if ~isempty(ImgF)
 
 
             %get the network
-            [~,network] = distance_network(sz(1),validPixels, av_json.parameters);
+            [~,network] = distance_network(sz(1),validPixels, av_json.parameters.hkradius);
 
 
             %for each segment of the recording find clusters
