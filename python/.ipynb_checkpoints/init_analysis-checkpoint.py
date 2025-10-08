@@ -31,7 +31,7 @@ av_json = info['av_json']
 reference = info['reference']
 
 thresh = 1
-tag = 'radius_1'#_framedownsample_50'#'shortavsL2'
+tag = 'radius_8'#_framedownsample_50'#'shortavsL2'
 map_type = 'act_map'
 
 result_dir = calcium_dir / 'event_based_networks' / 'python' / 'results' / computer

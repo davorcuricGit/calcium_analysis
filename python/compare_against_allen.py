@@ -125,17 +125,17 @@ for i, subject_file in enumerate(subject_jsons):
     print()
     print(subject_json[need_step].keys())
     print(need_step)
-    stop
+    
     
     # Load nodes
     try :
         #get the event based network
-        # print('')
-        # print(need_step)
-        # print(subject_json[need_step])
-        # print(tag + 'thresh_' + str(thresh))
+        print('')
+        print(need_step)
+        print(subject_json[need_step])
+        print(tag + 'thresh_' + str(thresh))
         
-        en_name = subject_json[need_step][tag + 'thresh_' + str(thresh)]['left_right_avgd']
+        en_name = subject_json[need_step][tag + 'thresh=' + str(thresh)]['left_right_avgd']
 
         #get the functional connectome
         try:
