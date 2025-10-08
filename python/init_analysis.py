@@ -31,10 +31,13 @@ av_json = info['av_json']
 reference = info['reference']
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 thresh = 1
 tag = 'radius_1'#_framedownsample_50'#'shortavsL2'
 map_type = 'act_map'
 
+=======
+>>>>>>> parent of ae74a07 (PYTHON: added tag system and updated codes that call jsons)
 =======
 >>>>>>> parent of ae74a07 (PYTHON: added tag system and updated codes that call jsons)
 result_dir = calcium_dir / 'event_based_networks' / 'python' / 'results' / computer
