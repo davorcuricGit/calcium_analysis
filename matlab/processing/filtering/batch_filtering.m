@@ -21,7 +21,10 @@ for n = 1:length(lines)
 end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 %
+=======
+>>>>>>> parent of 0f83d76 (some comment updates, updates to get_avalanches to accomodate variable types)
 =======
 >>>>>>> parent of 0f83d76 (some comment updates, updates to get_avalanches to accomodate variable types)
 band = [0.1 15];
