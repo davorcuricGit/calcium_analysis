@@ -23,17 +23,20 @@ import functions as my
 importlib.reload(my)
 
 calcium_dir = Path.home() / 'Documents' / 'calciumAnalysis'
-info = my.init_analysis(calcium_dir, projectidx = 0)
+info = my.init_analysis(calcium_dir)
 computer = info['computer']
 project = info['project']
 subject_jsons = info['subject_jsons']
 av_json = info['av_json']
 reference = info['reference']
 
+<<<<<<< HEAD
 thresh = 1
 tag = 'radius_1'#_framedownsample_50'#'shortavsL2'
 map_type = 'act_map'
 
+=======
+>>>>>>> parent of ae74a07 (PYTHON: added tag system and updated codes that call jsons)
 result_dir = calcium_dir / 'event_based_networks' / 'python' / 'results' / computer
 if not os.path.exists(result_dir):
     Path(result_dir).mkdir(parents = True, exist_ok = True)
@@ -42,5 +45,5 @@ if not os.path.exists(result_dir):
 __all__ = [
     'np','json', 'plt', 'pd', 'os', 'Path', 're', 'nx', 'random', 'combinations',
     'math', 'pickle', 'my', 'calcium_dir', 'computer', 'project',
-    'subject_jsons', 'av_json', 'reference', 'result_dir', 'thresh', 'tag', 'map_type'
+    'subject_jsons', 'av_json', 'reference', 'result_dir'
 ]
