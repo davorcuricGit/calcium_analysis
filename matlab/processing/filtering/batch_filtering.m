@@ -1,7 +1,9 @@
 clear all
 %% get the files
 
-lines = readlines("dirs_to_filter.txt");
+addpath(genpath('/home/dcuric/Documents/calciumAnalysis/codes/matlab/load_save/'))
+
+lines = readlines("/home/dcuric/Documents/calciumAnalysis/codes/matlab/processing/filtering/dirs_to_filter.txt");
 
 folders = [];
 for n = 1:length(lines)
@@ -11,6 +13,7 @@ end
 %
 band = [0.1 15];
 %
+
 for i = 1:length(folders)
     filedir = folders{i};
     filedir

@@ -1,5 +1,5 @@
 
-function [all_clusters,flag, ME] = get_avalanches(ImgF, subject_json, av_json, project)
+function [all_clusters,flag,subject_json, ME] = get_avalanches(ImgF, subject_json, av_json, project)
 
 all_clusters = [];
 ME = [];%error handeling
@@ -18,11 +18,15 @@ stepparams = struct(step = av_json.step, ...
     downsample = av_json.ImgF_processing.down_sample, ...
     warp = project.raw_parameters.warp);
 
+mask = load_standard_mask(av_json.ImgF_processing);
+mask = single(mask / max(max(mask)));
+
+
 if ~isempty(ImgF)
     try
         if av_json.run
             %prep the recording by downsampling, removing bad frames,
-            [ImgF, validPixels, sz] = spatial_downsample_reshaped(ImgF, av_json.ImgF_processing.down_sample, av_json.ImgF_processing);
+            [ImgF, validPixels, sz] = spatial_downsample_reshaped(ImgF, av_json.ImgF_processing.down_sample, mask);
 
             ImgF = nanzscore(ImgF')';
 
@@ -46,7 +50,7 @@ if ~isempty(ImgF)
 
 
             %get the network
-            [~,network] = distance_network(sz(1),validPixels, av_json.parameters);
+            [~,network] = distance_network(sz(1),validPixels, av_json.parameters.hkradius);
 
 
             %for each segment of the recording find clusters
