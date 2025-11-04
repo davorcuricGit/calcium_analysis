@@ -23,28 +23,20 @@ function index = fetchMotionErrorFile(filename,Sxyz)
 
 [pathname,~]=fileparts(filename);
 
-load([pathname '/frame_error.mat'],'error');
-error = error(1:Sxyz(3));
-index=remove_errors(error);
-%ImgF=ImgF(:,:,index);
+T = load([pathname '/frame_error.mat']);%,'error');
 
-% 
-% disp(['Read file finised in ' num2str(round(toc)) 's: ' filename]);
-% end
-% 
-% %%
-% %warp
-% function img=output_warped(ImgF,tform,dorsalMaps)
-% % use tform to output transformed
-% ImgF_warped=imwarp(ImgF,tform,'OutputView',imref2d(size(dorsalMaps.dorsalMapScaled)));
-% 
-% %scale down and clip
-% img=imresize(ImgF_warped,.5);
-% img(291:end,:,:)=[];
-% img(:,[1,292,293],:)=[];
-% end
-% 
-% %remove errors
+if isfield(T, 'pd')
+    %new script
+    ind_reg = T.ind_reg;
+    index = remove_errors2(ind_reg);
+else
+    %old script
+    error = T.error;
+    error = error(1:Sxyz(3));
+    index=remove_errors(error);
+
+end
+
 function [index]=remove_errors(error)
 
 ol=isoutlier(error);
